@@ -1,6 +1,3 @@
-# Project-Relevant Artifacts
-## Milestone Requirements:
-https://docs.google.com/document/d/1qYNeobXymzNKOzY0OjfjW4TqzmjFzzKxikV7_kwF-bo/edit?usp=sharing
 # Roles:
 ## Frontend Engineers
 - Kulani Chan
@@ -10,3 +7,8 @@ https://docs.google.com/document/d/1qYNeobXymzNKOzY0OjfjW4TqzmjFzzKxikV7_kwF-bo/
 - Tommy Trenh
 - Edwin Nino Delgado
 - Samedh Desai
+# Project-Relevant Artifacts
+## Milestone Requirements:
+https://docs.google.com/document/d/1qYNeobXymzNKOzY0OjfjW4TqzmjFzzKxikV7_kwF-bo/edit?usp=sharing
+## GitHub Repository
+https://github.com/ttrenh/DeBored
