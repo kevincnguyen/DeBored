@@ -51,3 +51,8 @@ Start working on backend architecture design by 10/24
 ### Plans and Goals:
 - Collaborate with other frontend engineers to brainstorm and design the frontend
 ## Samedh Desai
+### Progress and Issues:
+- Created use case for requirements milestone
+- Helped think of some potential additional features and problems
+### Plans and Goals:
+- Collaborate with other backend engineers to design the backend
