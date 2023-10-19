@@ -13,5 +13,4 @@
 - GitHub Repository
   - https://github.com/ttrenh/DeBored
 # Communication channels/tools and corresponding policies.
-## 
 - Discord
