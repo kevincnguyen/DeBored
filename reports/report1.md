@@ -1,18 +1,19 @@
 # Team Report:
 ## Progress and Issues:
-  Created a quarter-long plan for the project
+- Created a quarter-long plan for the project
   Outlined MVP features to work towards
-  Decided on roles for team members
+- Decided on roles for team members
   Established communication between team members
 ## Plans/Goals:
   Start working on frontend design by 10/24
-    - Kulani Chan
-    - Kevin Nguyen
-    - David Sy
-  Start working on backend architecture design by 10/24
-    - Tommy Trenh
-    - Samedh Desai
-    - Edwin Nino Delgado
+- Kulani Chan
+- Kevin Nguyen
+- David Sy
+
+Start working on backend architecture design by 10/24
+- Tommy Trenh
+- Samedh Desai
+- Edwin Nino Delgado
 
 # Individual Contributions: 
 ## Tommy Trenh:
