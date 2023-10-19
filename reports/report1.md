@@ -1,9 +1,9 @@
 # Team Report:
 ## Progress and Issues:
 - Created a quarter-long plan for the project
-  Outlined MVP features to work towards
+- Outlined MVP features to work towards
 - Decided on roles for team members
-  Established communication between team members
+- Established communication between team members
 ## Plans/Goals:
   Start working on frontend design by 10/24
 - Kulani Chan
