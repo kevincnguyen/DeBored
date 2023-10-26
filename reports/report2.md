@@ -64,7 +64,12 @@ Start working on backend architecture design by 10/24
 ### Previous Plans/Goals:
 - Collaborate with other backend engineers to design the backend
 ### Progress and Issues:
+- Started backend architecture design 
 ### Upcoming Plans/Goals:
+- Work with other backend engineers
+- Come up with a stand-alone backend with adding and retrieving data functionality 
+- After that, add authentication features
+
 
 
 
