@@ -27,7 +27,7 @@ Start working on backend architecture design by 10/24
 - Think of more ideas on how DeBored will work
 ### Progress and Issues:
 - Developed ideas on how backend will be structured to allow for frontend to use database
-- Upcoming Plans/Goals:
+### Upcoming Plans/Goals:
 - Start thinking about how to implement the MVPs and try to get some code down
 ## Kevin Nguyen: 
 ### Previous Plans/Goals:
