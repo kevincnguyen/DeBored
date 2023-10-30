@@ -1,20 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View } from "react-native";
+
+import ProfileCard from "../components/Profile/ProfileCard";
+import Contact from "../components/Profile/Contact";
+import Recent from "../components/Profile/Recent";
 
 const ProfileScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Profile Screen</Text>
+    <View>
+      <ProfileCard />
+      <Contact />
+      <Recent />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FFFFFF",
-  },
-});
 
 export default ProfileScreen;
