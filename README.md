@@ -5,5 +5,5 @@ DeBored is an innovative app designed to combat boredom by allowing individuals 
 ## Directories
 
 There are two top-level sub-directories detailed below:
-- `code/` contains all of the frontend files including code and documentation
+- `frontend/` contains all of the frontend files including code and documentation
 - `reports/` contains all of the weekly status reports
