@@ -4,7 +4,8 @@ DeBored is an innovative app designed to combat boredom by allowing individuals 
 
 ## Directories
 
-There are 3 top-level sub-directories detailed below:
+There are 4 top-level sub-directories detailed below:
+- `.github/` contains all files for CI using GitHub Actions
 - `frontend/` contains all of the frontend files including code and documentation
 - `backend/` contains all of the backend files including code and documentation
 - `reports/` contains all of the weekly status reports
