@@ -1,0 +1,17 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "tar -a -cf LoginUser.zip . && aws --profile debored s3 cp LoginUser.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name LoginUser --s3-bucket debored-lambdas --s3-key LoginUser.zip && rm LoginUser.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.2.0"
+  }
+}
