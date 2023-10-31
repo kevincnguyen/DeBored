@@ -1,0 +1,17 @@
+{
+  "name": "create-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "tar -a -cf CreateUser.zip . && aws --profile debored s3 cp CreateUser.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name CreateUser --s3-bucket debored-lambdas --s3-key CreateUser.zip && rm CreateUser.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.2.0"
+  }
+}
