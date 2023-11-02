@@ -1,19 +1,80 @@
-import { View, Text, StyleSheet } from "react-native";
+import React from "react";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Home Screen</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Text style={styles.firstHeader}>Recent Popular Activities</Text>
+      <ScrollView
+        style={styles.circleContainer}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+      </ScrollView>
+      <Text style={styles.secondHeader}>Recommended by Friends</Text>
+      <ScrollView
+        style={styles.circleContainer}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+      </ScrollView>
+      <Text style={styles.thirdHeader}>Discover New People</Text>
+      <ScrollView
+        style={styles.circleContainer}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+      </ScrollView>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#FFFFFF",
+  },
+  firstHeader: {
+    fontSize: 24,
+    color: "#000000",
+    textAlign: "center",
+    marginTop: 130,
+  },
+  secondHeader: {
+    fontSize: 24,
+    color: "#000000",
+    textAlign: "center",
+    marginTop: 50,
+  },
+  thirdHeader: {
+    fontSize: 24,
+    color: "#000000",
+    textAlign: "center",
+    marginTop: 50,
+  },
+  circleContainer: {
+    flexDirection: "row",
+    marginTop: 30,
+    paddingHorizontal: 10, // Adjust padding as needed
+  },
+  circle: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: "blue",
+    marginLeft: 10, // Adjust margin as needed
   },
 });
 
