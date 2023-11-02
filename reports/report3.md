@@ -24,7 +24,7 @@ Start working on backend
 ### Previous Plans/Goals:
 - Start thinking about how to implement the MVPs and try to get some code down
 ### Progress and Issues:
-- Started working on how to view current user’s account information
+- Started working on how to implement user’s account information into account
 - Difficulty navigating through all the resources and uncomfortable with the language
 ### Upcoming Plans/Goals:
 - Have user accounts have information from the user
