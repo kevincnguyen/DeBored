@@ -1,14 +1,74 @@
-import { View, Text, Button, StyleSheet } from "react-native";
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 const QuizScreen = () => {
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const quizQuestions = [
+    {
+      question: "Outdoor or Indoor?",
+      options: ["Outdoor", "Indoor"],
+    },
+    {
+      question: "Solo or Social?",
+      options: ["Solo", "Social"],
+    },
+    {
+      question: "Budget",
+      options: ["$", "$$$"],
+    },
+  ];
+
+  const handleStartPress = () => {
+    setQuizStarted(true);
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < quizQuestions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // Handle quiz completion, e.g., display results
+    }
+  };
+
+  const renderQuizContent = () => {
+    if (quizStarted) {
+      if (currentQuestionIndex < quizQuestions.length) {
+        return (
+          <>
+            <Text style={styles.questionText}>
+              {quizQuestions[currentQuestionIndex].question}
+            </Text>
+            {quizQuestions[currentQuestionIndex].options.map((option, index) => (
+              <Button
+                key={index}
+                title={option}
+                onPress={() => handleNextQuestion()}
+                color="#0a0a09"
+              />
+            ))}
+          </>
+        );
+      } else {
+        // Quiz completed, show results or a completion message
+        return <Text>Quiz Completed</Text>;
+      }
+    } else {
+      return (
+        <View style={styles.circularButton}>
+          <Button
+            title="Take the Quiz!"
+            onPress={() => handleStartPress()}
+            color="#0a0a09"
+        />
+        </View>
+      );
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>DeBored Yourself!</Text>
-      </View>
-      <View style={styles.startButtonContainer}>
-        <Button title="Start" onPress={() => handleStartPress()} color="#0a0a09" />
-      </View>
+      <View style={styles.questionContainer}>{renderQuizContent()}</View>
     </View>
   );
 };
@@ -17,31 +77,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-end", // Align the content to the bottom
+    justifyContent: "center", // Center the content both horizontally and vertically
     backgroundColor: "#FFFFFF",
   },
-  headerContainer: {
-    flex: 1, // Take up one-third of the available space
-    justifyContent: "center",
+  questionContainer: {
+    alignItems: "center",
   },
-  headerText: {
-    fontSize: 24,
-    color: "#ff1100",
-    textAlign: "center", // Center the text horizontally
+  questionText: {
+    fontSize: 18,
+    marginBottom: 20,
   },
-  startButtonContainer: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
+  circularButton: {
+    width: 150, // Adjust the size as needed
+    height: 150, // Adjust the size as needed
+    borderRadius: 75, // Half of the width/height to create a circle
     backgroundColor: "#f7f728",
     alignItems: "center",
     justifyContent: "center",
   },
+  buttonText: {
+    color: "#ecf011",
+  },
 });
-
-const handleStartPress = () => {
-  // Handle the "Start" button press here
-  // You can navigate to a new screen or perform any other action
-};
 
 export default QuizScreen;
