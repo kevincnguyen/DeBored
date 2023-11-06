@@ -1,16 +1,29 @@
-import { View } from "react-native";
+import React, { useState, useCallback } from "react";
+import { RefreshControl, ScrollView } from "react-native";
 
 import ProfileCard from "../components/Profile/ProfileCard";
-import Contact from "../components/Profile/Contact";
-import Recent from "../components/Profile/Recent";
+import RecentActivity from "../components/Profile/RecentActivity";
 
 const ProfileScreen = () => {
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setTimeout(() => {
+      // re-fetch profile data
+      setRefreshing(false);
+    }, 1000);
+  }, []);
+
   return (
-    <View>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+      }
+    >
       <ProfileCard />
-      <Contact />
-      <Recent />
-    </View>
+      <RecentActivity />
+    </ScrollView>
   );
 };
 
