@@ -9,3 +9,7 @@ There are 4 top-level sub-directories detailed below:
 - `frontend/` contains all of the frontend files including code and documentation
 - `backend/` contains all of the backend files including code and documentation
 - `reports/` contains all of the weekly status reports
+
+## Beta Release Use Case
+
+For our Beta Release, we focused on implementing the use case of allowing a user to take a quiz inquiring about their interests and have our app come up with activities based off of the user's answers. In addition, DeBored is able to generate new ideas in the case that the user is not enticed by a suggested activity (regenerated ideas are also based off of user's responses).
