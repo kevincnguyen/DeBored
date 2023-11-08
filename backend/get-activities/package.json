@@ -1,0 +1,17 @@
+{
+  "name": "get-activities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "tar -a -cf GetActivities.zip . && aws --profile debored s3 cp GetActivities.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name GetActivities --s3-bucket debored-lambdas --s3-key GetActivities.zip && rm GetActivities.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.2.0"
+  }
+}
