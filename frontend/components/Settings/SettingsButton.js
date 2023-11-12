@@ -2,6 +2,9 @@ import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 
+/*
+ * The button used to navigate to the profile settings screen 
+ */
 const SettingsButton = () => {
   const navigation = useNavigation();
 

@@ -7,8 +7,12 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
+// TODO: Include more variety of icons
 const icons = ["call", "logo-instagram", "mail"];
 
+/*
+ * A row of contact icons
+ */
 const ContactInfo = () => {
   const handlePress = (icon) => {
     if (icon === "call") {
@@ -33,6 +37,7 @@ const ContactInfo = () => {
     }
   };
 
+  // TODO: Filter icons that match fetched data from user
   const displayIcons = icons.map((icon) => {
     return (
       <TouchableOpacity key={icon} onPress={() => handlePress(icon)}>

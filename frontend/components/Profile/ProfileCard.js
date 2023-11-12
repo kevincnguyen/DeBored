@@ -3,7 +3,11 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import ContactInfo from "./ContactInfo";
 import DefaultImage from "../../assets/images/default.png";
 
+/*
+ * A card displaying the profile picture, name, bio, and contact 
+ */
 const ProfileCard = () => {
+  // TODO: use fetched user data
   return (
     <View style={styles.container}>
       <Image source={DefaultImage} style={styles.picture} />
