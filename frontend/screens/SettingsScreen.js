@@ -4,6 +4,9 @@ import { Button, TextInput } from "react-native-paper";
 
 import DefaultImage from "../assets/images/default.png";
 
+/*
+ * The profile settings screen that allows users to update information.
+ */
 const SettingsScreen = () => {
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
@@ -12,13 +15,13 @@ const SettingsScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleChangePicture = () => {
-    console.log("Changing Profile Picture");
-    // need S3
+    console.log("Changing profile picture");
+    // TODO: need S3
   };
 
   const handleSubmit = () => {
-    console.log("Submitting");
-    // need update profile route
+    console.log("Saving changes");
+    // TODO: need update profile backend route
   };
 
   return (
@@ -68,7 +71,7 @@ const SettingsScreen = () => {
             }
           />
           <Button mode="contained" title="Submit" onPress={handleSubmit}>
-            Submit
+            Save Changes
           </Button>
         </View>
       </ScrollView>

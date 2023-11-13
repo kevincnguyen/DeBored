@@ -6,6 +6,9 @@ import SettingsButton from "../components/Settings/SettingsButton";
 
 const Stack = createStackNavigator();
 
+/*
+ * The navigation between the profile and profile settings
+ */
 const ProfileStack = () => {
   return (
     <Stack.Navigator initialRouteName="Main">
