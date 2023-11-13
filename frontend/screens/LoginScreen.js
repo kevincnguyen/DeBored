@@ -1,27 +1,39 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Keyboard } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Keyboard,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
 
 import { useUser } from "../contexts/UserContext";
-import DismssKeyboard from "../components/Utils/DismissKeyboard";
+import DismissKeyboard from "../components/Utils/DismissKeyboard";
 
 const LoginScreen = () => {
+  const navigation = useNavigation();
   const { updateUser } = useUser();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
+  const handleLogin = () => {
     console.log("Logging in");
     Keyboard.dismiss();
-    // TODO: use log in route
+    // TODO: use log in route to validate user
     updateUser({}); // test user (for now)
   };
 
+  const navigateToForgotPassword = () => {
+    navigation.navigate("ForgotPassword");
+  };
+
   return (
-    <DismssKeyboard>
+    <DismissKeyboard>
       <View style={styles.container}>
-        <View style={styles.input}>
-          <Text>Login</Text>
+        <Text style={styles.title}>Login to DeBored</Text>
+        <View style={styles.form}>
           <TextInput
             mode="outlined"
             label="Email"
@@ -33,13 +45,23 @@ const LoginScreen = () => {
             label="Password"
             value={password}
             onChangeText={(password) => setPassword(password)}
+            style={styles.input}
           />
+          <TouchableOpacity onPress={navigateToForgotPassword}>
+            <Text style={styles.forgot}>Forgot password?</Text>
+          </TouchableOpacity>
+          <Button
+            mode="contained"
+            onPress={handleLogin}
+            contentStyle={styles.buttonContent}
+            labelStyle={styles.text}
+            style={styles.button}
+          >
+            Login
+          </Button>
         </View>
-        <Button mode="contained" onPress={handleSubmit}>
-          Login
-        </Button>
       </View>
-    </DismssKeyboard>
+    </DismissKeyboard>
   );
 };
 
@@ -49,9 +71,33 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
+    paddingBottom: 150,
+  },
+  title: {
+    fontSize: 35,
+    fontWeight: "bold",
+    marginBottom: 30,
+  },
+  form: {
+    width: "90%",
   },
   input: {
-    width: "80%",
+    marginTop: 10,
+  },
+  forgot: {
+    color: "#FF6961",
+    textAlign: "right",
+    marginTop: 5,
+    marginBottom: 25,
+  },
+  button: {
+    borderRadius: 10,
+  },
+  buttonContent: {
+    paddingVertical: 5,
+  },
+  text: {
+    fontSize: 16,
   },
 });
 

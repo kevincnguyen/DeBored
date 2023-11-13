@@ -21,14 +21,30 @@ const LoginStack = () => {
       <Stack.Screen
         name="Login"
         component={LoginScreen}
-        options={{ headerTitle: "", headerBackTitle: "Back" }}
+        options={{
+          headerTitle: "",
+          headerBackTitle: "Back",
+          headerShadowVisible: false,
+        }}
       />
       <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
-        options={{ headerTitle: "", headerBackTitle: "Back" }}
+        options={{
+          headerTitle: "",
+          headerBackTitle: "Back",
+          headerShadowVisible: false,
+        }}
       />
-      <Stack.Screen name="ForgotPassord" component={ForgotPassordScreen} />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassordScreen}
+        options={{
+          headerTitle: "",
+          headerBackTitle: "Back",
+          headerShadowVisible: false,
+        }}
+      />
     </Stack.Navigator>
   );
 };
