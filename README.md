@@ -12,15 +12,42 @@ There are 4 top-level sub-directories detailed below:
 - `backend/` contains all of the backend files including code and documentation
 - `reports/` contains all of the weekly status reports
 
-## Development 
+## User Manual 
+
+### Description
+
+DeBored is a mobile application that helps users fight boredom through providing tailored hobby and activity suggestions, and fostering friendships between users with shared interests. If you find yourself bored, DeBored is here to help!
+
+### Installation 
+
+To install DeBored: 
+1. Install the Expo Go app on your mobile device from the App Store or Google Play Store
+  
+### Running the App
+
+To run the app: 
+1. Visit DeBored on the Expo App Store [WIP]
+2. Scan the QR code on your mobile device [WIP]
+
+### Using the App
+
+In order to provide tailored suggestions, you will need to create an account. Please sign up and login to get started! After logging in, you will be redirected to the homepage and can start getting DeBored!
+
+### Report Bugs 
+
+Please report issues in the app [public Git repository](https://github.com/ttrenh/DeBored/) using the bug report template. Refer to [Issues](https://github.com/ttrenh/DeBored/issues) for current known bugs and limitations.
+
+## Development Guidelines 
 
 ### Setup 
 
 1. Install the Node.js runtime (v18.18.2) and Git in order to retrieve the source code and contribute to it
       1. This is necessary in order to build, test, and the run the system
-2. `cd frontend` from the root directory
-3. Run `npm install` to install dependencies
-4. Install the Expo Go app on your mobile device
+2. Run `git clone https://github.com/ttrenh/DeBored.git` to clone the DeBored source
+      1. Refer to [Directories](#directories) for the layout of our directory structure
+4. `cd frontend` from the cloned root directory
+5. Run `npm install` to install dependencies
+6. Install the Expo Go app on your mobile device from the App Store or Google Play Store
   
 ### Build and Run 
 
@@ -39,7 +66,19 @@ To manually test the frontend:
 
 To add new tests to CI testing: 
 1. Navigate into the `frontend/screens/__tests__` from the root directory
-2. Create a test in a `TestName.test.js` file
+2. Create a test file with the naming convention: `TestName.test.js`
+3. Write tests using the Jest JavaScript testing framework
+
+### Build a Release 
+
+To build a release of the software:
+1. In the code and documentation, the developer should update the release version number prior to invoking the build system.
+      1. Open the package.json file in the directories of the project
+      2. Update the version field to a new version number following semantic versioning (e.g., "1.0.0" to "1.0.1")
+3. Commit changes
+4. Check that all dependencies are up to date
+5. Build the Expo App with `expo build`
+6. Test the build 
 
 ## Releases
 
