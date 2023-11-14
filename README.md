@@ -2,7 +2,7 @@
 
 DeBored is an innovative app designed to combat boredom by allowing individuals to discover new hobbies and connect with like-minded people. Our goal is to create a personalized experience by offering tailored hobby suggestions while fostering friendships among users who share common interests!
 
-**Release:** v1.0.0 (Beta)
+**Release:** v1.0.1 (Checkpoint)
 
 ## Directories
 
@@ -62,3 +62,7 @@ To build a release of the software:
 ### Beta Release
 
 For our Beta Release, we focused on implementing the use case of allowing a user to take a quiz inquiring about their interests and have our app come up with activities based off of the user's answers. In addition, DeBored is able to generate new ideas in the case that the user is not enticed by a suggested activity (regenerated ideas are also based off of user's responses).
+
+### Checkpoint Release
+
+For our Checkpoint Release, we focused on implementing the entire basic UI for the app. We are now focusing on developing key features such as friends and location-based suggestions.
