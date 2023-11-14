@@ -1,5 +1,8 @@
 import { View, Text, Button, StyleSheet } from "react-native";
 
+/*
+ * Displays a quiz question and all of its possible answer options
+ */
 const QuizQuestion = ({ question, handleNextQuestion }) => {
   return (
     <View>
@@ -9,7 +12,7 @@ const QuizQuestion = ({ question, handleNextQuestion }) => {
           key={index}
           title={option}
           onPress={() => handleNextQuestion(option)}
-          color="#0a0a09"
+          color="#0A0A09"
         />
       ))}
     </View>

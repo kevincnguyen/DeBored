@@ -1,5 +1,8 @@
 import { View, Button, StyleSheet } from "react-native";
 
+/**
+ * The screen with the start quiz button
+ */
 const StartQuiz = ({ handleStartPress }) => {
   return (
     <View style={styles.circularButton}>

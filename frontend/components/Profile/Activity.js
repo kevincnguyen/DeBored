@@ -1,11 +1,15 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 
+/*
+ * An activity represented by its icon, activity name, and further description
+ */
 const Activity = ({ name, image }) => {
   return (
     <View style={styles.container}>
       <Image style={styles.picture} source={image} />
       <View style={styles.info}>
         <Text style={styles.name}>{name}</Text>
+        {/* TODO: Modal when pressing "see more" with further description of activity */}
         <Text style={styles.caption}>see more</Text>
       </View>
     </View>

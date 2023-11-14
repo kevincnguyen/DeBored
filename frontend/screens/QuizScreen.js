@@ -20,6 +20,9 @@ const quizQuestions = [
   },
 ];
 
+/*
+ * The DeBored quiz screen that helps users find new activities.
+ */
 const QuizScreen = () => {
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

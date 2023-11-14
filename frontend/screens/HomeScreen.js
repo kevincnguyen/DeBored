@@ -1,6 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
+/*
+ * The home screen including recent popular activities,
+ * recommended activities by friends, and friend suggestions.
+ */
 const HomeScreen = () => {
   return (
     <ScrollView style={styles.container}>

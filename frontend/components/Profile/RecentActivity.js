@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import Activity from "./Activity";
 import DefaultImage from "../../assets/images/default.png";
 
+// TODO: fetch recent activities
 const activities = [
   {
     name: "Hiking",
@@ -18,6 +19,9 @@ const activities = [
   },
 ];
 
+/*
+ * A list of recent activities displayed on a user profile.
+ */
 const RecentActivity = () => {
   const displayActivities = activities.map((activity) => (
     <Activity key={activity.name} name={activity.name} image={activity.image} />

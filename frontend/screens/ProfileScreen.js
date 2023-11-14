@@ -4,6 +4,9 @@ import { RefreshControl, ScrollView } from "react-native";
 import ProfileCard from "../components/Profile/ProfileCard";
 import RecentActivity from "../components/Profile/RecentActivity";
 
+/*
+ * The profile screen including profile information and a users recent DeBored activities.
+ */
 const ProfileScreen = () => {
   const [refreshing, setRefreshing] = useState(false);
 
@@ -22,6 +25,7 @@ const ProfileScreen = () => {
       }
     >
       <ProfileCard />
+      {/* TODO: Render friend request button if viewing other user profile */}
       <RecentActivity />
     </ScrollView>
   );
