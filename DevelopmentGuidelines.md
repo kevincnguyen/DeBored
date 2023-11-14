@@ -5,7 +5,7 @@
 1. Install the Node.js runtime (v18.18.2) and Git in order to retrieve the source code and contribute to it
       1. This is necessary in order to build, test, and the run the system
 2. Run `git clone https://github.com/ttrenh/DeBored.git` to clone the DeBored source
-      1. Refer to [Directories](#directories) for the layout of our directory structure
+      1. Refer to [Directories](https://github.com/ttrenh/DeBored#directories) for the layout of our directory structure
 4. `cd frontend` from the cloned root directory
 5. Run `npm install` to install dependencies
 6. Install the Expo Go app on your mobile device from the App Store or Google Play Store
