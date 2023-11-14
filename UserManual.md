@@ -17,7 +17,7 @@ To run the app:
 
 ## Using the App
 
-In order to provide tailored suggestions, you will need to create an account. Please sign up and login to get started! After logging in, you will be redirected to the homepage and can start getting DeBored!
+In order to provide tailored suggestions, you will need to create an account [WIP]. Please sign up and login to get started [WIP]! After logging in, you will be redirected to the homepage and can start getting DeBored!
 
 ## Report Bugs 
 
