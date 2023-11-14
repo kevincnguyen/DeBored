@@ -12,6 +12,8 @@ There are 4 top-level sub-directories detailed below:
 - `backend/` contains all of the backend files including code and documentation
 - `reports/` contains all of the weekly status reports
 
+Refer to all .md files for documentation.
+
 ## Development Guidelines 
 
 ### Setup 
