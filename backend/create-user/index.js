@@ -7,10 +7,10 @@ export const handler = async (event, context) => {
     context.callbackWaitsForEmptyEventLoop = false;
     try{
         console.log(`Received event: ${JSON.stringify(event)}`)
-        const {username, password} = JSON.parse(event.body)
-        console.log(`username: ${username}, password: ${password}`)
+        const {email, password, name} = JSON.parse(event.body)
+        console.log(`email: ${email}, password: ${password}, name: ${name}`)
         await client.connect()
-        await client.db("DeBored").collection('Users').insertOne({username, password, friends: []})
+        await client.db("DeBored").collection('Users').insertOne({email, password, friends: [], name, bio: '', profilePicURL: '', instagram: '', twitter: '', facebook: '', phone: ''})
         return {
             statusCode: 200,
             body: JSON.stringify({message: 'User created'})
