@@ -32,29 +32,29 @@ const QuizScreen = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [locationInput, setLocationInput] = useState('');
+  const [locationEntered, setLocationEntered] = useState(false)
 
   // Event handler for input change
   const handleLocationInputChange = (text) => {
     setLocationInput(text);
   };
 
-  const processLocationInput = () => {
-    console.log('empty location input')
-    if (locationInput === '') {
-      // Do Nothing
-    } else {
-      alert('You entered something else!');
-    }
-  };
+
 
   const handleStartPress = () => {
     setQuizStarted(true);
+  };
+
+  const processLocationInput = () => {
+    setLocationEntered(true);
   };
 
   const handleResetPress = () => {
     setQuizStarted(false);
     setCurrentQuestionIndex(0);
     setChosenAnswers([]);
+    setLocationEntered(false)
+    setLocationInput('');
   };
 
   const handleNextQuestion = (option) => {
@@ -76,20 +76,26 @@ const QuizScreen = () => {
           handleNextQuestion={handleNextQuestion}
         />
       );
-    } else {   
+    } else if (!locationEntered) { 
+  
+      // render screen to get the location
       return (
-        <QuizResults
-          chosenAnswers={chosenAnswers}
-          locationInput = {<View>
-            <Text>"Enter your location or enter N/A if you would like not to":</Text>
+      <View>
+            <Text>Enter your location or enter N/A if you would like not to:</Text>
             <TextInput
               style={styles.input}
-              placeholder="Enter your location"
+              placeholder="location"
               value={locationInput}
               onChangeText={handleLocationInputChange}
             />
             <Button title="Submit" onPress={processLocationInput} />
-          </View>}
+          </View>
+      );
+    } else {
+      return (
+        <QuizResults
+          chosenAnswers={chosenAnswers}
+          locationInput = {locationInput}
           handleResetPress={handleResetPress}
         />
       );
