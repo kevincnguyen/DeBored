@@ -1,0 +1,16 @@
+{
+  "name": "respond-friend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "tar -a -cf RespondFriend.zip . && aws --profile debored s3 cp RespondFriend.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name RespondtFriend --s3-bucket debored-lambdas --s3-key RespondFriend.zip && rm RespondFriend.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
