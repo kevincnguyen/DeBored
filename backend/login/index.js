@@ -7,10 +7,10 @@ export const handler = async (event, context) => {
     context.callbackWaitsForEmptyEventLoop = false;
     try{
         console.log(`Received event: ${JSON.stringify(event)}`)
-        const {username, password} = JSON.parse(event.body)
-        console.log(`username: ${username}, password: ${password}`)
+        const {email, password} = JSON.parse(event.body)
+        console.log(`email: ${email}, password: ${password}`)
         await client.connect()
-        const result = await client.db("DeBored").collection('Users').findOne({username: username})
+        const result = await client.db("DeBored").collection('Users').findOne({email: email})
         if (!result) {
             throw new Error('User not found')
         }
@@ -19,7 +19,7 @@ export const handler = async (event, context) => {
         }
         return {
             statusCode: 200,
-            body: JSON.stringify({message: 'User logged in successfully'})
+            body: JSON.stringify({message: 'User logged in successfully', user: result})
         }
     } catch(error) {
         console.log(`Error: ${error}`)

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Keyboard,
+  Alert
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Button, TextInput } from "react-native-paper";
@@ -21,8 +22,36 @@ const LoginScreen = () => {
   const handleLogin = () => {
     console.log("Logging in");
     Keyboard.dismiss();
-    // TODO: use log in route to validate user
-    updateUser({}); // test user (for now)
+    fetch("https://p4qfuoh5pd.execute-api.us-west-2.amazonaws.com/default/LoginUser", {
+      method: "POST",
+      body: JSON.stringify({email: email, password: password}),
+    })
+    .then(response => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error("Invalid login");
+      }
+    })
+    .then(response => {
+      console.log(`response: ${JSON.stringify(response)}`)
+        updateUser(response);
+        navigation.navigate("Home");
+    })
+    .catch(err => {
+      console.log(err)
+      Alert.alert(
+        "Error",
+        "Invalid login, please try again.",
+        [
+          {
+            text: "OK",
+            onPress: () => console.log("OK pressed")
+          }
+        ],
+        { cancelable: false }
+      );
+    })
   };
 
   const navigateToForgotPassword = () => {

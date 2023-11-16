@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Keyboard,
+  Alert
 } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
@@ -21,8 +22,74 @@ const SignUpScreen = () => {
   const handleSignUp = () => {
     console.log("Creating account");
     Keyboard.dismiss();
-    // TODO: use create use route to add to database
-    updateUser({}); // test user (for now)
+    if (password !== confirmPassword) {
+      Alert.alert(
+        "Error",
+        "Passwords do not match",
+        [
+          {
+            text: "OK",
+            onPress: () => console.log("OK pressed")
+          }
+        ],
+        { cancelable: false }
+      );
+      return;
+    }
+    // check if all fields are filled
+    if (name === "" || email === "" || password === "") {
+      Alert.alert(
+        "Error",
+        "Please fill out all fields",
+        [
+          {
+            text: "OK",
+            onPress: () => console.log("OK pressed")
+          }
+        ],
+        { cancelable: false }
+      );
+      return;
+    }
+    // check if email is valid regex
+    if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
+      Alert.alert(
+        "Error",
+        "Please enter a valid email",
+        [
+          {
+            text: "OK",
+            onPress: () => console.log("OK pressed")
+          }
+        ],
+        { cancelable: false }
+      );
+      return;
+    }
+    fetch('https://2zwdgalwbk.execute-api.us-west-2.amazonaws.com/default/CreateUser', {
+      method: 'POST',
+      body: JSON.stringify({name: name, email: email, password: password}),
+    }).then(response => {
+      if (response.status === 200) {
+        updateUser({name: name, email: email, password: password});
+      } else {
+        throw new Error('Invalid login');
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      Alert.alert(
+        "Error",
+        "Invalid login, please try again.",
+        [
+          {
+            text: "OK",
+            onPress: () => console.log("OK pressed")
+          }
+        ],
+        { cancelable: false }
+      );
+    })
   };
 
   return (
