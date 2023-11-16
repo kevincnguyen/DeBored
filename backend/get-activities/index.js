@@ -13,7 +13,7 @@ async function getActivity(answers) {
     });
 
     console.log(completion.choices[0]);
-    return JSON.parse(completion.choices[0])['activity_suggestion'];
+    return JSON.parse(completion.choices[0].message.content)['activity_suggestion'];
 }
 
 export const handler = async (event) => {
@@ -21,12 +21,13 @@ export const handler = async (event) => {
         console.log(`Received event: ${JSON.stringify(event)}`)
         const { answers } = JSON.parse(event.body)
 
-        if (!result) {
+        if (!answers) {
             throw new Error('No activities available')
         }
+        const activity = await getActivity(answers)
         return {
             statusCode: 200,
-            body: JSON.stringify({ activity: getActivity(answers) })
+            body: JSON.stringify({ activity:  activity})
         }
     } catch (error) {
         console.log(`Error: ${error}`)
