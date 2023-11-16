@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet } from "react-native";
 /*
  * The screen that displays the DeBored quiz results
  */
-const QuizResults = ({ chosenAnswers, handleResetPress }) => {
+const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
   const [activities, setActivities] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
