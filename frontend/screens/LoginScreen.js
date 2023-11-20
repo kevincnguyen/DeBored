@@ -35,7 +35,7 @@ const LoginScreen = () => {
     })
     .then(response => {
       console.log(`response: ${JSON.stringify(response)}`)
-        updateUser(response.user);
+      updateUser(response.user);
     })
     .catch(err => {
       console.log(err)

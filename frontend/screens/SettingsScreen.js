@@ -11,7 +11,7 @@ import DefaultImage from "../assets/images/default.png";
 const SettingsScreen = () => {
   const { user } = useUser();
   console.log("user",JSON.stringify(user))
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,6 +24,7 @@ const SettingsScreen = () => {
 
   const handleSubmit = () => {
     console.log("Saving changes");
+
     // TODO: need update profile backend route
   };
 
