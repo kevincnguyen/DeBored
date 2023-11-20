@@ -35,8 +35,7 @@ const LoginScreen = () => {
     })
     .then(response => {
       console.log(`response: ${JSON.stringify(response)}`)
-        updateUser(response);
-        navigation.navigate("Home");
+        updateUser(response.user);
     })
     .catch(err => {
       console.log(err)
