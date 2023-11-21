@@ -1,28 +1,39 @@
-import {MongoClient} from 'mongodb'
+import OpenAI from "openai";
 
-const client = new MongoClient(process.env.MONGODB_URI)
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export const handler = async (event, context) => {
-    // This line allows us to return from the function before the connection to MongoDB Atlas is closed
-    context.callbackWaitsForEmptyEventLoop = false;
-    try{
+
+async function getActivity(answers) {
+    const completion = await openai.chat.completions.create({
+        messages: [{ role: "system", content: "You are hired to give activity suggestions to people who are bored. You will be given their responses for their requirements of activity you will generate. you will return a JSON object of the format {activity_suggestion: SUGGESTED-ACTIVITY-HERE}" },
+        { role: "user", content: JSON.stringify(answers) },
+        ],
+        model: "gpt-4-1106-preview",
+        response_format: { type: "json_object" }
+    });
+
+    console.log(completion.choices[0]);
+    return JSON.parse(completion.choices[0].message.content)['activity_suggestion'];
+}
+
+export const handler = async (event) => {
+    try {
         console.log(`Received event: ${JSON.stringify(event)}`)
-        const {answers} = JSON.parse(event.body)
-        await client.connect()
-        const result = await client.db("DeBored").collection('Activities').findOne({answers : {$all: answers}})
-        // need a collection of activities then, and also .findOne({answers: answers})?
-        if (!result) {
+        const { answers } = JSON.parse(event.body)
+
+        if (!answers) {
             throw new Error('No activities available')
         }
+        const activity = await getActivity(answers)
         return {
             statusCode: 200,
-            body: JSON.stringify({activity: result})
+            body: JSON.stringify({ activity:  activity})
         }
-    } catch(error) {
+    } catch (error) {
         console.log(`Error: ${error}`)
         return {
             statusCode: 400,
-            body: JSON.stringify({message: `Error finding activities: ${error}`})
+            body: JSON.stringify({ message: `Error finding activities: ${error}` })
         }
     }
 }
