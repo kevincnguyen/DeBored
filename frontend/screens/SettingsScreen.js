@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, ScrollView, Image, StyleSheet } from "react-native";
 import { Button, TextInput } from "react-native-paper";
+import { useUser } from "../contexts/UserContext";
 
 import DefaultImage from "../assets/images/default.png";
 
@@ -8,6 +9,8 @@ import DefaultImage from "../assets/images/default.png";
  * The profile settings screen that allows users to update information.
  */
 const SettingsScreen = () => {
+  const { user } = useUser();
+  console.log("user",JSON.stringify(user))
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [email, setEmail] = useState("");
@@ -21,6 +24,7 @@ const SettingsScreen = () => {
 
   const handleSubmit = () => {
     console.log("Saving changes");
+
     // TODO: need update profile backend route
   };
 
