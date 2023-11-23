@@ -60,6 +60,6 @@
 - Finish location based suggestions feature
 - Finish linking front and back end
 ### Progress and Issues:
--
+- Designed a prompt and storage feature for location entry to feed into our activity generation
 ### Upcoming Plans/Goals:
--
+- Connect the location feature with the quiz results and chatGPT so that the LLM can recommend activities with their corresponding locations
