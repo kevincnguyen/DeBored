@@ -10,10 +10,10 @@
   - Start implementing location-based suggestions with AI
   - Create API to save profile information
 ## Progress and Issues:
--
+- Implemented AI activities suggestions
 ## Upcoming Plans/Goals:
 - Fix the location bug and finish connecting the location feature with the AI for location recommendations
-- 
+- Add more robust testing suite
 # Individual Contributions: 
 ## Tommy Trenh:
 ### Previous Plans/Goals:
@@ -42,9 +42,9 @@
 ### Previous Plans/Goals:
 - Implement AI into the activities suggestions
 ### Progress and Issues:
--
+- Implemented AI into the activities suggestions
 ### Upcoming Plans/Goals:
--
+- Work on location bug and implement more robust testing suite
 ## David Sy
 ### Previous Plans/Goals:
 - Update the quiz to ask about the user’s location (optional)
