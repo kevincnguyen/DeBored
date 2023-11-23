@@ -13,6 +13,8 @@
 - Implemented AI activities suggestions
 ## Upcoming Plans/Goals:
 - Fix the location bug and finish connecting the location feature with the AI for location recommendations
+- Complete friend feature
+- Start implementing profile pictures
 - Add more robust testing suite
 # Individual Contributions: 
 ## Tommy Trenh:
@@ -27,9 +29,10 @@
 - Implement profile pictures using S3 
 - Implement friending functionality with Kulani
 ### Progress and Issues:
--
+- Created Lambda functions to send friend requests and respond to friend requests
 ### Upcoming Plans/Goals:
--
+- Complete friend feature
+- Start working on profile pictures
 ## Kulani Chan: 
 ### Previous Plans/Goals:
 - Get the camera and QR code scanning working or some alternative way of finding a specific user profile
