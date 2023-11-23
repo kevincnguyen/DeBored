@@ -12,7 +12,8 @@
 ## Progress and Issues:
 -
 ## Upcoming Plans/Goals:
--
+- Fix the location bug and finish connecting the location feature with the AI for location recommendations
+- 
 # Individual Contributions: 
 ## Tommy Trenh:
 ### Previous Plans/Goals:
@@ -49,9 +50,11 @@
 - Update the quiz to ask about the user’s location (optional)
 - Implement AI into our app so that it can give users nearby places for their recommended activity based on their location
 ### Progress and Issues:
--
+- Currently working to update the quiz section of the app so that users can choose if they want to input a location which would allow the app to recommend places near them
+- App crashes when location is entered so we are working to find and resolve the bug
 ### Upcoming Plans/Goals:
--
+- Finish implementing the location option for the quiz
+- Connect the location feature with an AI so that the AI can recommend places for the user based of their quiz results
 ## Samedh Desai
 ### Previous Plans/Goals:
 - Finish location based suggestions feature
