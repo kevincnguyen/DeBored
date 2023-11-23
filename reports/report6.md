@@ -21,9 +21,10 @@
 ### Previous Plans/Goals:
 - Create an endpoint for users to store information in their accounts
 ### Progress and Issues:
--
+- Created an endpoint for users to store information in their accounts
+- Discussed next ideas on how to progress forwards
 ### Upcoming Plans/Goals:
--
+- Add a way to see recent history for activities
 ## Kevin Nguyen: 
 ### Previous Plans/Goals:
 - Implement profile pictures using S3 
