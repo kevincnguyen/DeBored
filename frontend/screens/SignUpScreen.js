@@ -71,10 +71,14 @@ const SignUpScreen = () => {
     )
       .then((response) => {
         if (response.status === 200) {
-          updateUser({ name: name, email: email, password: password });
+          return response.json();
         } else {
-          throw new Error("Invalid login");
+          throw new Error("Invalid signup");
         }
+      })
+      .then((response) => {
+        console.log(`response: ${JSON.stringify(response)}`);
+        updateUser(response.user);
       })
       .catch((err) => {
         console.log(err);
