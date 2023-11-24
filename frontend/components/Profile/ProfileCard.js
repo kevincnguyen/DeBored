@@ -9,7 +9,6 @@ import { useUser } from "../../contexts/UserContext";
  * A card displaying the profile picture, name, bio, and contact
  */
 const ProfileCard = () => {
-  // TODO: use fetched user data
   const { user } = useUser();
 
   return (

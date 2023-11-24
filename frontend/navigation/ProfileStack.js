@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import ProfileScreen from "../screens/ProfileScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import SettingsButton from "../components/Settings/SettingsButton";
+import LogoutButton from "../components/Settings/LogoutButton";
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,7 @@ const ProfileStack = () => {
         component={SettingsScreen}
         options={{
           headerTitle: "Settings",
+          headerRight: () => <LogoutButton />,
         }}
       />
     </Stack.Navigator>
