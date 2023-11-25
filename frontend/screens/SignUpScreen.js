@@ -66,7 +66,11 @@ const SignUpScreen = () => {
       "https://2zwdgalwbk.execute-api.us-west-2.amazonaws.com/default/CreateUser",
       {
         method: "POST",
-        body: JSON.stringify({ name: name, email: email, password: password }),
+        body: JSON.stringify({
+          email,
+          password,
+          name,
+        }),
       }
     )
       .then((response) => {
@@ -84,7 +88,7 @@ const SignUpScreen = () => {
         console.log(err);
         Alert.alert(
           "Error",
-          "Invalid login, please try again.",
+          "Invalid signup, please try again.",
           [
             {
               text: "OK",

@@ -1,19 +1,22 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 
 import ContactInfo from "./ContactInfo";
-import DefaultImage from "../../assets/images/default.png";
 
 import { useUser } from "../../contexts/UserContext";
 
 /*
  * A card displaying the profile picture, name, bio, and contact
  */
-const ProfileCard = () => {
+const ProfileCard = ({ imageKey }) => {
   const { user } = useUser();
 
   return (
     <View style={styles.container}>
-      <Image source={DefaultImage} style={styles.picture} />
+      <Image
+        key={imageKey}
+        source={{ uri: user.profilePicURL }}
+        style={styles.picture}
+      />
       <Text style={styles.name}>{user.name}</Text>
       <Text style={styles.bio}>{user.bio}</Text>
       <ContactInfo />
