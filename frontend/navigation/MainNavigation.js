@@ -6,6 +6,7 @@ const Tab = createMaterialBottomTabNavigator();
 import HomeScreen from "../screens/HomeScreen";
 import QuizScreen from "../screens/QuizScreen";
 import ProfileStack from "./ProfileStack";
+import HomeStack from "./HomeStack";
 
 /*
  * The bottom navigation bar to switch between home, quiz, and profile screens
@@ -19,7 +20,7 @@ const MainNavigation = () => {
     >
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeStack}
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (
