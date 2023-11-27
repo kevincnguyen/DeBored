@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders SettingsScreen component correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "alignItems": "center",
+        "flexGrow": 1,
+      }
+    }
+  >
+    <View>
+      <Image
+        source={1}
+        style={
+          {
+            "borderRadius": 60,
+            "height": 120,
+            "marginBottom": 10,
+            "width": 120,
+          }
+        }
+      />
+      <Button
+        mode="contained-tonal"
+        onPress={[Function]}
+        title="Submit"
+      >
+        Edit picture
+      </Button>
+      <View
+        style={
+          {
+            "flexDirection": "column",
+            "gap": 10,
+            "marginVertical": 20,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          label="Name"
+          mode="outlined"
+          onChangeText={[Function]}
+          value=""
+        />
+        <TextInput
+          label="Bio"
+          mode="outlined"
+          multiline={true}
+          numberOfLines={4}
+          onChangeText={[Function]}
+          value=""
+        />
+        <TextInput
+          label="Email"
+          mode="outlined"
+          onChangeText={[Function]}
+          value=""
+        />
+        <TextInput
+          label="Password"
+          mode="outlined"
+          onChangeText={[Function]}
+          value=""
+        />
+        <TextInput
+          label="Confirm Password"
+          mode="outlined"
+          onChangeText={[Function]}
+          value=""
+        />
+        <Button
+          mode="contained"
+          onPress={[Function]}
+          title="Submit"
+        >
+          Save Changes
+        </Button>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

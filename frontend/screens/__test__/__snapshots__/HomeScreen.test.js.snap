@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays correct header texts 1`] = `
+<RCTScrollView
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 24,
+          "marginTop": 130,
+          "textAlign": "center",
+        }
+      }
+    >
+      Recent Popular Activities
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        {
+          "flexDirection": "row",
+          "marginTop": 30,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 24,
+          "marginTop": 50,
+          "textAlign": "center",
+        }
+      }
+    >
+      Recommended by Friends
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        {
+          "flexDirection": "row",
+          "marginTop": 30,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 24,
+          "marginTop": 50,
+          "textAlign": "center",
+        }
+      }
+    >
+      Discover New People
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        {
+          "flexDirection": "row",
+          "marginTop": 30,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders HomeScreen component correctly 1`] = `
+<RCTScrollView
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 24,
+          "marginTop": 130,
+          "textAlign": "center",
+        }
+      }
+    >
+      Recent Popular Activities
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        {
+          "flexDirection": "row",
+          "marginTop": 30,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 24,
+          "marginTop": 50,
+          "textAlign": "center",
+        }
+      }
+    >
+      Recommended by Friends
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        {
+          "flexDirection": "row",
+          "marginTop": 30,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+    <Text
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 24,
+          "marginTop": 50,
+          "textAlign": "center",
+        }
+      }
+    >
+      Discover New People
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        {
+          "flexDirection": "row",
+          "marginTop": 30,
+          "paddingHorizontal": 10,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "blue",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTScrollView>
+`;
