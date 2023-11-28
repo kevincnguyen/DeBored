@@ -1,19 +1,39 @@
-import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import React, { useState, useCallback } from "react";
+import { View, Text, StyleSheet, RefreshControl, ScrollView } from "react-native";
 
 /*
  * The home screen including recent popular activities,
  * recommended activities by friends, and friend suggestions.
  */
 const HomeScreen = () => {
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setTimeout(() => {
+      // re-fetch profile data
+      setRefreshing(false);
+    }, 1000);
+  }, []);
+
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+      }
+    >
       <Text style={styles.firstHeader}>Recent Popular Activities</Text>
       <ScrollView
         style={styles.circleContainer}
         horizontal
         showsHorizontalScrollIndicator={false}
       >
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
         <View style={styles.circle} />
         <View style={styles.circle} />
         <View style={styles.circle} />
@@ -29,6 +49,12 @@ const HomeScreen = () => {
         <View style={styles.circle} />
         <View style={styles.circle} />
         <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
       </ScrollView>
       <Text style={styles.thirdHeader}>Discover New People</Text>
       <ScrollView
@@ -36,6 +62,12 @@ const HomeScreen = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
       >
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
+        <View style={styles.circle} />
         <View style={styles.circle} />
         <View style={styles.circle} />
         <View style={styles.circle} />
@@ -53,20 +85,23 @@ const styles = StyleSheet.create({
   firstHeader: {
     fontSize: 24,
     color: "#000000",
-    textAlign: "center",
-    marginTop: 130,
+    textAlign: "left",
+    marginTop: 30,
+    marginLeft: 20,
   },
   secondHeader: {
     fontSize: 24,
     color: "#000000",
-    textAlign: "center",
+    textAlign: "left",
     marginTop: 50,
+    marginLeft: 20,
   },
   thirdHeader: {
     fontSize: 24,
     color: "#000000",
-    textAlign: "center",
+    textAlign: "left",
     marginTop: 50,
+    marginLeft: 20,
   },
   circleContainer: {
     flexDirection: "row",
@@ -77,7 +112,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: "blue",
+    backgroundColor: "grey",
     marginLeft: 10, // Adjust margin as needed
   },
 });
