@@ -2,21 +2,23 @@
 
 exports[`displays correct header texts 1`] = `
 <RCTScrollView
-  style={
-    {
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-    }
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
   }
 >
+  <RCTRefreshControl />
   <View>
     <Text
       style={
         {
           "color": "#000000",
           "fontSize": 24,
-          "marginTop": 130,
-          "textAlign": "center",
+          "marginLeft": 20,
+          "marginTop": 30,
+          "textAlign": "left",
         }
       }
     >
@@ -37,7 +39,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -48,7 +50,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -59,7 +61,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -70,7 +72,73 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -85,8 +153,9 @@ exports[`displays correct header texts 1`] = `
         {
           "color": "#000000",
           "fontSize": 24,
+          "marginLeft": 20,
           "marginTop": 50,
-          "textAlign": "center",
+          "textAlign": "left",
         }
       }
     >
@@ -107,7 +176,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -118,7 +187,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -129,7 +198,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -140,7 +209,73 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -155,8 +290,9 @@ exports[`displays correct header texts 1`] = `
         {
           "color": "#000000",
           "fontSize": 24,
+          "marginLeft": 20,
           "marginTop": 50,
-          "textAlign": "center",
+          "textAlign": "left",
         }
       }
     >
@@ -177,7 +313,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -188,7 +324,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -199,7 +335,7 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -210,7 +346,73 @@ exports[`displays correct header texts 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -226,21 +428,23 @@ exports[`displays correct header texts 1`] = `
 
 exports[`renders HomeScreen component correctly 1`] = `
 <RCTScrollView
-  style={
-    {
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-    }
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
   }
 >
+  <RCTRefreshControl />
   <View>
     <Text
       style={
         {
           "color": "#000000",
           "fontSize": 24,
-          "marginTop": 130,
-          "textAlign": "center",
+          "marginLeft": 20,
+          "marginTop": 30,
+          "textAlign": "left",
         }
       }
     >
@@ -261,7 +465,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -272,7 +476,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -283,7 +487,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -294,7 +498,73 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -309,8 +579,9 @@ exports[`renders HomeScreen component correctly 1`] = `
         {
           "color": "#000000",
           "fontSize": 24,
+          "marginLeft": 20,
           "marginTop": 50,
-          "textAlign": "center",
+          "textAlign": "left",
         }
       }
     >
@@ -331,7 +602,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -342,7 +613,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -353,7 +624,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -364,7 +635,73 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -379,8 +716,9 @@ exports[`renders HomeScreen component correctly 1`] = `
         {
           "color": "#000000",
           "fontSize": 24,
+          "marginLeft": 20,
           "marginTop": 50,
-          "textAlign": "center",
+          "textAlign": "left",
         }
       }
     >
@@ -401,7 +739,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -412,7 +750,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -423,7 +761,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
@@ -434,7 +772,73 @@ exports[`renders HomeScreen component correctly 1`] = `
         <View
           style={
             {
-              "backgroundColor": "blue",
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
+              "borderRadius": 40,
+              "height": 80,
+              "marginLeft": 10,
+              "width": 80,
+            }
+          }
+        />
+        <View
+          style={
+            {
+              "backgroundColor": "grey",
               "borderRadius": 40,
               "height": 80,
               "marginLeft": 10,
