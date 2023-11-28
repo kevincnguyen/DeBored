@@ -9,21 +9,28 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch("https://5ajg2vdq72.execute-api.us-west-2.amazonaws.com/default/GetActivities", {
-      method: "POST",
-      body: JSON.stringify({ answers: chosenAnswers }),
-    })
-    .then(response => response.json())
-    .then(results => {
-      if (results) {
-        setActivities(results.activity.activities);
-      } else {
-        setActivities(["No activities found"]);
+    fetch(
+      "https://5ajg2vdq72.execute-api.us-west-2.amazonaws.com/default/GetActivities",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          answers: [...chosenAnswers, locationInput || ""],
+        }),
       }
-    }).catch(err => {
-      console.log(err)
-      setActivities(["Encountered an error in fetching activities"]);
-    })
+    )
+      .then((response) => response.json())
+      .then((results) => {
+        console.log(`recieved results: ${JSON.stringify(results)}`);
+        if (results) {
+          setActivities(results.activity);
+        } else {
+          setActivities(["No activities found"]);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        setActivities(["Encountered an error in fetching activities"]);
+      });
   }, [chosenAnswers]);
 
   const handleRegenerate = () => {
