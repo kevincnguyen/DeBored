@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders SettingsScreen component correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    [
+      {
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessible={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "paddingHorizontal": 10,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        {
+          "alignItems": "center",
+          "flexGrow": 1,
+        }
+      }
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <Image
+          source={
+            {
+              "uri": undefined,
+            }
+          }
+          style={
+            {
+              "borderRadius": 60,
+              "height": 120,
+              "marginBottom": 10,
+              "marginTop": 20,
+              "width": 120,
+            }
+          }
+        />
+        <Button
+          mode="contained-tonal"
+          onPress={[Function]}
+          title="Submit"
+        >
+          Edit picture
+        </Button>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+              "gap": 10,
+              "marginBottom": 30,
+              "width": "95%",
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#7845AC",
+                "fontWeight": "bold",
+                "marginLeft": 3,
+                "marginTop": 15,
+              }
+            }
+          >
+            Profile
+          </Text>
+          <TextInput
+            label="Name"
+            mode="outlined"
+            onChangeText={[Function]}
+            value=""
+          />
+          <TextInput
+            label="Bio"
+            mode="outlined"
+            multiline={true}
+            numberOfLines={4}
+            onChangeText={[Function]}
+            value=""
+          />
+          <TextInput
+            disabled={true}
+            label="Email"
+            mode="outlined"
+            onChangeText={[Function]}
+            value=""
+          />
+          <TextInput
+            label="Password"
+            mode="outlined"
+            onChangeText={[Function]}
+            right={
+              <UNDEFINED
+                color="black"
+                icon="eye-off"
+                onPress={[Function]}
+              />
+            }
+            secureTextEntry={true}
+          />
+          <TextInput
+            label="Confirm Password"
+            mode="outlined"
+            onChangeText={[Function]}
+            right={
+              <UNDEFINED
+                color="black"
+                icon="eye-off"
+                onPress={[Function]}
+              />
+            }
+            secureTextEntry={true}
+            value=""
+          />
+        </View>
+        <View
+          style={
+            {
+              "flexDirection": "column",
+              "gap": 10,
+              "marginBottom": 30,
+              "width": "95%",
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#7845AC",
+                "fontWeight": "bold",
+                "marginLeft": 3,
+                "marginTop": 15,
+              }
+            }
+          >
+            Contact Information
+          </Text>
+          <TextInput
+            label="Phone Number"
+            mode="outlined"
+            onChangeText={[Function]}
+          />
+          <TextInput
+            label="Instagram Username"
+            mode="outlined"
+            onChangeText={[Function]}
+          />
+          <TextInput
+            label="Twitter Username"
+            mode="outlined"
+            onChangeText={[Function]}
+          />
+          <TextInput
+            label="Facebook Link"
+            mode="outlined"
+            onChangeText={[Function]}
+          />
+          <Button
+            mode="contained"
+            onPress={[Function]}
+            style={
+              {
+                "marginTop": 15,
+              }
+            }
+            title="Submit"
+          >
+            Save Changes
+          </Button>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

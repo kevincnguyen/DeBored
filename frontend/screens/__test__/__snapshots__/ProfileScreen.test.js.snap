@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProfileScreen component correctly 1`] = `
+<RCTScrollView
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
+  }
+>
+  <RCTRefreshControl />
+  <View>
+    <ProfileCard />
+    <RecentActivity />
+  </View>
+</RCTScrollView>
+`;
