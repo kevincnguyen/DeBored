@@ -25,7 +25,8 @@ test("renders SettingsScreen component correctly", () => {
 test("contains all input fields with correct labels", () => {
   const component = renderer.create(<SettingsScreen />);
   const textInputs = component.root.findAllByType("TextInput");
-  expect(textInputs.length).toBe(5); // 5 inputs: name, bio, email, password, confirm password
+  // 9 inputs: name, bio, email, password, confirm password, phone, instagram, facebook, twitter
+  expect(textInputs.length).toBe(9);
 });
 
 test("contains buttons for changing picture and saving changes", () => {
