@@ -1,0 +1,17 @@
+{
+  "name": "get-friends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "tar -a -cf GetFriends.zip . && aws --profile debored s3 cp GetFriends.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name GetFriends --s3-bucket debored-lambdas --s3-key GetFriends.zip && rm GetFriends.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}

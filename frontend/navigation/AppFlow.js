@@ -21,9 +21,7 @@ const AppFlow = () => {
         // TODO: check if authenticated user is logged in
         //        1. get from local storage
         //        2. setUser state if logged in
-
         // simulate checking authentication (for now)
-        await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (err) {
         console.error("Error checking user authentication: ", err);
       } finally {

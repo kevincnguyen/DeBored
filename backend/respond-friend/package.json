@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "zip": "tar -a -cf RespondFriend.zip . && aws --profile debored s3 cp RespondFriend.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name RespondtFriend --s3-bucket debored-lambdas --s3-key RespondFriend.zip && rm RespondFriend.zip"
+    "zip": "tar -a -cf RespondFriend.zip . && aws --profile debored s3 cp RespondFriend.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name RespondFriend --s3-bucket debored-lambdas --s3-key RespondFriend.zip && rm RespondFriend.zip"
   },
   "keywords": [],
   "author": "",

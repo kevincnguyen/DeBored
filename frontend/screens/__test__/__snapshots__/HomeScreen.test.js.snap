@@ -22,7 +22,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         }
       }
     >
-      Recent Popular Activities
+      Discover New People
     </Text>
     <RCTScrollView
       horizontal={true}
@@ -296,7 +296,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         }
       }
     >
-      Discover New People
+      Recent Popular Activities
     </Text>
     <RCTScrollView
       horizontal={true}

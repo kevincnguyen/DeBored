@@ -20,7 +20,6 @@ export const handler = async (event, context) => {
       twitter,
       facebook,
       phone,
-      recentActivities,
     } = JSON.parse(event.body);
 
     await client.connect();
@@ -52,7 +51,6 @@ export const handler = async (event, context) => {
       ...(twitter && { twitter: twitter }),
       ...(facebook && { facebook: facebook }),
       ...(phone && { phone: phone }),
-      ...(recentActivities && { recentActivities: recentActivities }),
     };
 
     // Updates the Users collection
