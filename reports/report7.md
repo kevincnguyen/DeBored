@@ -28,9 +28,10 @@
 ### Previous Plans/Goals:
 - Work on getting things set up on the front end in terms of friends and friends list, etc.
 ### Progress and Issues:
--
+- Created friends screen to display friend requests with options to accept or reject
+- Added navigation from the home screen to get to the friend screen 
 ### Upcoming Plans/Goals:
--
+- Linking frontend and backend functionality for profile pictures on home screen and friends
 ## Edwin Nino Delgado
 ### Previous Plans/Goals:
 - Work on location bug and implement more robust testing suite
