@@ -5,9 +5,12 @@
 - Start implementing profile pictures
 - Add more robust testing suite
 ## Progress and Issues:
-- fixed location bug and added new tests
+- Fixed location bug and added new tests
+- Completed profile pictures feature
 ## Upcoming Plans/Goals:
-- polish quiz ui
+- Polish quiz UI
+- Implement friends system
+  
 # Individual Contributions: 
 ## Tommy Trenh:
 ### Previous Plans/Goals:
@@ -21,9 +24,12 @@
 - Complete friend feature
 - Start working on profile pictures
 ### Progress and Issues:
--
+- Completed profile picture functionality
+- Completed recent activity history
+- Updated profile settings screen and various other APIs to reflect the new changes
+- Created backend APIs for friend requests
 ### Upcoming Plans/Goals:
--
+- Link friend request backend to the frontend and finish the friend feature
 ## Kulani Chan: 
 ### Previous Plans/Goals:
 - Work on getting things set up on the front end in terms of friends and friends list, etc.
