@@ -5,9 +5,9 @@
 - Start implementing profile pictures
 - Add more robust testing suite
 ## Progress and Issues:
--
+- fixed location bug and added new tests
 ## Upcoming Plans/Goals:
--
+- polish quiz ui
 # Individual Contributions: 
 ## Tommy Trenh:
 ### Previous Plans/Goals:
@@ -36,9 +36,9 @@
 ### Previous Plans/Goals:
 - Work on location bug and implement more robust testing suite
 ### Progress and Issues:
--
+- fixed location bug and added more tests to the test suit
 ### Upcoming Plans/Goals:
--
+- help polish UI for thte quiz
 ## David Sy
 ### Previous Plans/Goals:
 - Finish implementing the location option for the quiz
