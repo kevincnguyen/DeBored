@@ -9,8 +9,8 @@ export const handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
   try {
     console.log(`Received event: ${JSON.stringify(event)}`);
-    const { id, activities } = JSON.parse(event.body);
-    console.log(`id: ${id}, activities: ${activities}`);
+    const { id, activity } = JSON.parse(event.body);
+    console.log(`id: ${id}, activity : ${activity}`);
 
     // Connect to MongoDB
     await client.connect();
@@ -32,12 +32,12 @@ export const handler = async (event, context) => {
     // Append activities to user
     await usersCollection.updateOne(
       { _id: new ObjectId(id) },
-      { $push: { recentActivities: { $each: activities } } }
+      { $push: { recentActivities: activity } }
     );
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Activities added successfully" }),
+      body: JSON.stringify({ message: "Activity added successfully" }),
     };
   } catch (error) {
     console.log(`Error: ${error}`);
