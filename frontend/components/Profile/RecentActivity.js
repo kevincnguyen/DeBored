@@ -9,9 +9,11 @@ import { useUser } from "../../contexts/UserContext";
 const RecentActivity = () => {
   const { user } = useUser();
 
-  const displayActivities = user.recentActivities.map((activity) => (
-    <Activity key={activity} activity={activity} />
-  ));
+  const displayActivities = user.recentActivities
+    .reverse()
+    .map((activity, index) => (
+      <Activity key={`${activity}-${index}`} activity={activity} />
+    ));
 
   return (
     <View style={styles.container}>
@@ -24,12 +26,14 @@ const RecentActivity = () => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
-    marginVertical: 20,
+    marginTop: 20,
+    marginBottom: 50,
   },
   header: {
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    marginBottom: 10,
   },
 });
 

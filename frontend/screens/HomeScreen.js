@@ -1,5 +1,11 @@
 import React, { useState, useCallback } from "react";
-import { View, Text, StyleSheet, RefreshControl, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  RefreshControl,
+  ScrollView,
+} from "react-native";
 
 /*
  * The home screen including recent popular activities,
@@ -22,7 +28,7 @@ const HomeScreen = () => {
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
-      <Text style={styles.firstHeader}>Recent Popular Activities</Text>
+      <Text style={styles.firstHeader}>Discover New People</Text>
       <ScrollView
         style={styles.circleContainer}
         horizontal
@@ -56,7 +62,7 @@ const HomeScreen = () => {
         <View style={styles.circle} />
         <View style={styles.circle} />
       </ScrollView>
-      <Text style={styles.thirdHeader}>Discover New People</Text>
+      <Text style={styles.thirdHeader}>Recent Popular Activities</Text>
       <ScrollView
         style={styles.circleContainer}
         horizontal

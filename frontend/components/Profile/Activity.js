@@ -38,7 +38,6 @@ const icons = [
   "list",
   "check",
   "times",
-  "refresh",
   "cog",
   "spinner",
   "download",
@@ -122,6 +121,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 600,
     marginLeft: 10,
+    flex: 1,
+    flexWrap: "wrap",
   },
 });
 

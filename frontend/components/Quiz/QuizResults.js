@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
+import { useUser } from "../../contexts/UserContext";
+
 /*
  * The screen that displays the DeBored quiz results
  */
 const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
+  const { user, updateUser } = useUser();
   const [activities, setActivities] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -20,26 +23,53 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
     )
       .then((response) => response.json())
       .then((results) => {
-        console.log(`recieved results: ${JSON.stringify(results)}`);
+        console.log(`Recieved results: ${JSON.stringify(results)}`);
         if (results) {
           setActivities(results.activity);
+          saveActivity(results.activity[0]);
         } else {
           setActivities(["No activities found"]);
         }
       })
       .catch((err) => {
-        console.log(err);
+        console.error("Error: ", err);
         setActivities(["Encountered an error in fetching activities"]);
       });
   }, [chosenAnswers]);
 
   const handleRegenerate = () => {
-    // find the next item in the activities array
+    // Find the next item in the activities array
     let next = currentIndex + 1;
     if (next >= activities.length) {
       next = 0;
     }
     setCurrentIndex(next);
+    saveActivity(activities[next]);
+  };
+
+  const saveActivity = (activity) => {
+    const updatedUser = { ...user };
+    updatedUser.recentActivities.push(activity);
+
+    // Update MongoDB
+    fetch(
+      "https://96fv05cgth.execute-api.us-west-2.amazonaws.com/default/UpdateActivities",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          id: user._id,
+          activity: activity,
+        }),
+      }
+    )
+      .then((response) => response.json())
+      .then((results) => {
+        console.log(`Received results: ${JSON.stringify(results)}`);
+        updateUser(updatedUser);
+      })
+      .catch((err) => {
+        console.error("Error: ", err);
+      });
   };
 
   return (
