@@ -12,25 +12,36 @@ export const handler = async (event, context) => {
     console.log(`Received event: ${JSON.stringify(event)}`);
     const { email, password, name } = JSON.parse(event.body);
     console.log(`email: ${email}, password: ${password}, name: ${name}`);
-    await client.connect();
 
-    // Insert the user document in order to retrieve the generated MongoDB ID
+    await client.connect();
+    const usersCollection = client.db("DeBored").collection("Users");
+
+    // Check if the user already exists
+    const userExists = await usersCollection.findOne({ email: email });
+    if (userExists) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({
+          message: "An account exists with this email",
+        }),
+      };
+    }
+
+    // Insert the user document initially to retrieve the generated MongoDB ID
     const user = {
       email,
       password,
       name,
       bio: "",
-      profilePicURL: "", // placeholder
+      profilePicURL: "",
       instagram: "",
       twitter: "",
       facebook: "",
       phone: "",
+      friends: [],
       recentActivities: [],
     };
-    const result = await client
-      .db("DeBored")
-      .collection("Users")
-      .insertOne(user);
+    const result = await usersCollection.insertOne(user);
 
     // Convert MongoDB ID to String
     const userId = result.insertedId.toString();
@@ -46,17 +57,14 @@ export const handler = async (event, context) => {
     await s3.copyObject(copyParams).promise();
 
     // Update the user document in MongoDB with new S3 URL
-    await client
-      .db("DeBored")
-      .collection("Users")
-      .updateOne(
-        { _id: result.insertedId },
-        {
-          $set: {
-            profilePicURL: `https://${bucket}.s3.amazonaws.com/${destinationKey}`,
-          },
-        }
-      );
+    await usersCollection.updateOne(
+      { _id: result.insertedId },
+      {
+        $set: {
+          profilePicURL: `https://${bucket}.s3.amazonaws.com/${destinationKey}`,
+        },
+      }
+    );
 
     return {
       statusCode: 200,
