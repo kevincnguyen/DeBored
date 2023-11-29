@@ -25,7 +25,6 @@ const ProfileScreen = ({ imageKey }) => {
       }
     >
       <ProfileCard imageKey={imageKey} />
-      {/* TODO: Render friend request button if viewing other user profile */}
       <RecentActivity />
     </ScrollView>
   );
