@@ -75,6 +75,7 @@ const QuizScreen = () => {
     setLocationInput("");
   };
 
+  // Iterate through the questions if we have more of them
   const handleNextQuestion = (option) => {
     setChosenAnswers([...chosenAnswers, option]);
     if (currentQuestionIndex < quizQuestions.length) {
@@ -83,11 +84,13 @@ const QuizScreen = () => {
   };
 
   const renderQuizContent = () => {
+    // Start the quiz
     if (!quizStarted) {
       return <StartQuiz handleStartPress={handleStartPress} />;
     }
 
     if (currentQuestionIndex < quizQuestions.length) {
+      // If we have more questions remaining, continue with the list of questions
       return (
         <QuizQuestion
           question={quizQuestions[currentQuestionIndex]}
@@ -118,7 +121,7 @@ const QuizScreen = () => {
       );
     } else {
       // When all multiple choice questions and the location is entered, we store the returned values
-      // Also account for a reset parameter
+      // Also account for a reset parameter if the user chooses to reset
       return (
         <QuizResults
           chosenAnswers={chosenAnswers}
