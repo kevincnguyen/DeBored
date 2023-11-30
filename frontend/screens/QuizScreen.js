@@ -8,16 +8,38 @@ import QuizResults from "../components/Quiz/QuizResults";
 const quizQuestions = [
   {
     question: "Outdoor or Indoor?",
-    options: ["Outdoor", "Indoor"],
+    options: ["Outdoor", "Indoor", "No Preference"],
   },
   {
     question: "Solo or Social?",
-    options: ["Solo", "Social"],
+    options: ["Solo", "Social", "No Preference"],
   },
   {
     question: "Budget",
-    options: ["$", "$$$"],
+    options: ["$", "$$$", "No Preference"],
   },
+  {
+    question: "Activity Level",
+    options: ["Physically Active", "Relaxed", "No Preference"],
+  },
+  {
+    question: "Time of Day",
+    options: ["Morning", "Afternoon", "Nighttime", "No Preference"],
+  },
+  {
+    question: "Technology?",
+    options: ["No electronics", "Gadgets and Tech!", "No Preference"],
+  },
+  {
+    question: "Food",
+    options: ["No Food", "Foodie!", "No Preference"],
+  },
+  {
+    question: "Adventurous?",
+    options: ["Homebody", "I want to explore", "No Preference"],
+  }
+  
+  
 ];
 
 /*
@@ -75,7 +97,7 @@ const QuizScreen = () => {
       return (
         <View style={styles.locationView}>
           <Text style={styles.locationQuestion}>
-            Enter your location or leave N/A if you would like not to:
+            Enter your location for location based recommendations. Leave N/A otherwise:
           </Text>
           <TextInput
             style={styles.input}
