@@ -59,6 +59,6 @@
 ### Previous Plans/Goals:
 - Connect the location feature with the quiz results and chatGPT so that the LLM can recommend activities with their corresponding locations
 ### Progress and Issues:
--
+- Worked on the Quiz backend to incorporate location data
 ### Upcoming Plans/Goals:
--
+- Complete location based outputs
