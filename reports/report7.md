@@ -44,15 +44,17 @@
 ### Progress and Issues:
 - fixed location bug and added more tests to the test suit
 ### Upcoming Plans/Goals:
-- help polish UI for thte quiz
+- help polish UI for the quiz
 ## David Sy
 ### Previous Plans/Goals:
 - Finish implementing the location option for the quiz
 - Connect the location feature with an AI so that the AI can recommend places for the user based of their quiz results
 ### Progress and Issues:
--
+- Had trouble location the bug causing the app to crash after taking the quiz. Edwin helped resolve it as there was a problem with the AI call
+- Updated and polished location prompt
 ### Upcoming Plans/Goals:
--
+- Add more questions to the quiz to generate more accurate results for users
+- Put finishing touches on UI
 ## Samedh Desai
 ### Previous Plans/Goals:
 - Connect the location feature with the quiz results and chatGPT so that the LLM can recommend activities with their corresponding locations
