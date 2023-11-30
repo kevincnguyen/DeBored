@@ -16,9 +16,9 @@
 ### Previous Plans/Goals:
 - Add a way to see recent history for activities
 ### Progress and Issues:
--
+- Got very sick and haven't been able to do much with such low energy
 ### Upcoming Plans/Goals:
--
+- Create a backend API for viewing all available friends
 ## Kevin Nguyen: 
 ### Previous Plans/Goals:
 - Complete friend feature
