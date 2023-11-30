@@ -27,7 +27,7 @@ const QuizScreen = () => {
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
-  const [locationInput, setLocationInput] = useState("");
+  const [locationInput, setLocationInput] = useState("N/A");
   const [locationEntered, setLocationEntered] = useState(false);
 
   // Event handler for input change
@@ -73,9 +73,9 @@ const QuizScreen = () => {
     } else if (!locationEntered) {
       // render screen to get the location
       return (
-        <View>
-          <Text>
-            Enter your location or enter N/A if you would like not to:
+        <View style={styles.locationView}>
+          <Text style={styles.locationQuestion}>
+            Enter your location or leave N/A if you would like not to:
           </Text>
           <TextInput
             style={styles.input}
@@ -83,7 +83,13 @@ const QuizScreen = () => {
             value={locationInput}
             onChangeText={handleLocationInputChange}
           />
-          <Button title="Submit" onPress={processLocationInput} />
+          <View style={styles.buttonOutline}>
+            <Button
+              title="Submit"
+              onPress={processLocationInput}
+              color="#ffffff"
+            />
+          </View>
         </View>
       );
     } else {
@@ -106,6 +112,30 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center", // Center the content both horizontally and vertically
     backgroundColor: "#FFFFFF",
+  },
+  locationView: {
+    width: 250,
+  },
+  locationQuestion: {
+    fontSize: 18,
+    marginTop: 50,
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  buttonOutline: {
+    borderColor: "#7845AC",
+    backgroundColor: "#7845AC",
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 5,
+    margin: 5,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
   },
 });
 

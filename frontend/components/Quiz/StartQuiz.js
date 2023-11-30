@@ -9,7 +9,7 @@ const StartQuiz = ({ handleStartPress }) => {
       <Button
         title="Take the Quiz!"
         onPress={handleStartPress}
-        color="#0A0A09"
+        color="#FFFFFF"
       />
     </View>
   );
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     width: 150, // Adjust the size as needed
     height: 150, // Adjust the size as needed
     borderRadius: 75, // Half of the width/height to create a circle
-    backgroundColor: "#f7f728",
+    backgroundColor: "#7845AC",
     alignItems: "center",
     justifyContent: "center",
   },
