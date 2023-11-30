@@ -5,6 +5,7 @@ import StartQuiz from "../components/Quiz/StartQuiz";
 import QuizQuestion from "../components/Quiz/QuizQuestion";
 import QuizResults from "../components/Quiz/QuizResults";
 
+// List of quiz questions
 const quizQuestions = [
   {
     question: "Outdoor or Indoor?",
@@ -65,6 +66,7 @@ const QuizScreen = () => {
     setLocationEntered(true);
   };
 
+  // Reset all variables when the reset is pressed
   const handleResetPress = () => {
     setQuizStarted(false);
     setCurrentQuestionIndex(0);
@@ -115,6 +117,8 @@ const QuizScreen = () => {
         </View>
       );
     } else {
+      // When all multiple choice questions and the location is entered, we store the returned values
+      // Also account for a reset parameter
       return (
         <QuizResults
           chosenAnswers={chosenAnswers}
