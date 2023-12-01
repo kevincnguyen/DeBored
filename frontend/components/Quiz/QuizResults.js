@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  ActivityIndicator,
+} from "react-native";
 
 import { useUser } from "../../contexts/UserContext";
 
@@ -10,6 +16,7 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
   const { user, updateUser } = useUser();
   const [activities, setActivities] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showSpinner, setShowSpinner] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -23,17 +30,20 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
     )
       .then((response) => response.json())
       .then((results) => {
-        console.log(`Recieved results: ${JSON.stringify(results)}`);
+        console.log(`results.activity: ${JSON.stringify(results.activity[0])}`);
+        console.log(`type of results.activity: ${typeof results.activity}`);
         if (results) {
           setActivities(results.activity);
           saveActivity(results.activity[0]);
         } else {
           setActivities(["No activities found"]);
         }
+        setShowSpinner(false);
       })
       .catch((err) => {
         console.error("Error: ", err);
         setActivities(["Encountered an error in fetching activities"]);
+        setShowSpinner(false);
       });
 
     if (locationInput !== "") {
@@ -105,12 +115,28 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
 
   return (
     <View>
-      <Button title="Reset" onPress={handleResetPress} color="blue" />
-      <View style={styles.container}>
-        <Text style={styles.header}>Quiz Completed</Text>
-        <Text>{activities[currentIndex]}</Text>
-      </View>
-      <Button title="Regenerate" onPress={handleRegenerate} color="red" />
+      {showSpinner ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <>
+          <View style={styles.container}>
+            <Text style={styles.header}>Quiz Completed</Text>
+            <Text style={styles.results}>{activities[currentIndex]}</Text>
+          </View>
+          <View style={styles.buttonContainer}>
+            <View style={styles.buttonOutline}>
+              <Button title="Reset" onPress={handleResetPress} color="white" />
+            </View>
+            <View style={styles.buttonOutline}>
+              <Button
+                title="Regenerate"
+                onPress={handleRegenerate}
+                color="white"
+              />
+            </View>
+          </View>
+        </>
+      )}
     </View>
   );
 };
@@ -120,10 +146,30 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 40,
+    width: 250,
+    textAlign: "justify",
+    height: 100,
   },
   header: {
-    fontSize: 18,
+    fontSize: 25,
     fontWeight: "bold",
+    marginBottom: 20,
+  },
+  results: {
+    fontSize: 18,
+  },
+  buttonContainer: {
+    margin: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  buttonOutline: {
+    borderColor: "#7845AC",
+    backgroundColor: "#7845AC",
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 5,
+    margin: 5,
   },
 });
 
