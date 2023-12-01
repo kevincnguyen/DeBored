@@ -7,11 +7,14 @@ import {
   ScrollView,
 } from "react-native";
 
+import { useUser } from "../contexts/UserContext";
+
 /*
  * The home screen including recent popular activities,
  * recommended activities by friends, and friend suggestions.
  */
 const HomeScreen = () => {
+  const { user } = useUser();
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = useCallback(() => {
@@ -45,7 +48,7 @@ const HomeScreen = () => {
         <View style={styles.circle} />
         <View style={styles.circle} />
       </ScrollView>
-      <Text style={styles.secondHeader}>Recommended by Friends</Text>
+      <Text style={styles.secondHeader}>Connect with Friends</Text>
       <ScrollView
         style={styles.circleContainer}
         horizontal
@@ -62,7 +65,9 @@ const HomeScreen = () => {
         <View style={styles.circle} />
         <View style={styles.circle} />
       </ScrollView>
-      <Text style={styles.thirdHeader}>Recent Popular Activities</Text>
+      <Text style={styles.thirdHeader}>
+        Discover People in {user.location || "Seattle, WA"}
+      </Text>
       <ScrollView
         style={styles.circleContainer}
         horizontal

@@ -20,6 +20,7 @@ export const handler = async (event, context) => {
       twitter,
       facebook,
       phone,
+      location,
     } = JSON.parse(event.body);
 
     await client.connect();
@@ -51,6 +52,7 @@ export const handler = async (event, context) => {
       ...(twitter && { twitter: twitter }),
       ...(facebook && { facebook: facebook }),
       ...(phone && { phone: phone }),
+      ...(location && { location: location }),
     };
 
     // Updates the Users collection
