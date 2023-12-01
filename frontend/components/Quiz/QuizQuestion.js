@@ -8,9 +8,8 @@ const QuizQuestion = ({ question, handleNextQuestion }) => {
     <View style={styles.questionView}>
       <Text style={styles.questionText}>{question.question}</Text>
       {question.options.map((option, index) => (
-        <View style={styles.buttonOutline}>
+        <View style={styles.buttonOutline} key={index}>
           <Button
-            key={index}
             title={option}
             onPress={() => handleNextQuestion(option)}
             color="#ffffff"

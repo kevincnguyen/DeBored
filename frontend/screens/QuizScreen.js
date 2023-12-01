@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { View, StyleSheet, TextInput, Text, Button } from "react-native";
+import { Provider } from "react-native-paper";
+import DropDown from "react-native-paper-dropdown";
 
 import StartQuiz from "../components/Quiz/StartQuiz";
 import QuizQuestion from "../components/Quiz/QuizQuestion";
@@ -38,9 +40,107 @@ const quizQuestions = [
   {
     question: "Adventurous?",
     options: ["Homebody", "I want to explore", "No Preference"],
-  }
-  
-  
+  },
+];
+
+// List of locations for dropdown
+const cities = [
+  {
+    label: "N/A",
+    value: "N/A",
+  },
+  {
+    label: "Seattle, WA",
+    value: "Seattle, WA",
+  },
+  {
+    label: "Bellevue, WA",
+    value: "Bellevue, WA",
+  },
+  {
+    label: "Lynnwood, WA",
+    value: "Lynnwood, WA",
+  },
+  {
+    label: "Spokane, WA",
+    value: "Spokane, WA",
+  },
+  {
+    label: "New York City, NY",
+    value: "New York City, NY",
+  },
+  {
+    label: "Los Angeles, CA",
+    value: "Los Angeles, CA",
+  },
+  {
+    label: "Chicago, IL",
+    value: "Chicago, IL",
+  },
+  {
+    label: "Houston, TX",
+    value: "Houston, TX",
+  },
+  {
+    label: "Phoenix, AZ",
+    value: "Phoenix, AZ",
+  },
+  {
+    label: "Philadelphia, PA",
+    value: "Philadelphia, PA",
+  },
+  {
+    label: "San Antonio, TX",
+    value: "San Antonio, TX",
+  },
+  {
+    label: "San Diego, CA",
+    value: "San Diego, CA",
+  },
+  {
+    label: "Dallas, TX",
+    value: "Dallas, TX",
+  },
+  {
+    label: "San Jose, CA",
+    value: "San Jose, CA",
+  },
+  {
+    label: "Austin, TX",
+    value: "Austin, TX",
+  },
+  {
+    label: "Jacksonville, FL",
+    value: "Jacksonville, FL",
+  },
+  {
+    label: "San Francisco, CA",
+    value: "San Francisco, CA",
+  },
+  {
+    label: "Columbus, OH",
+    value: "Columbus, OH",
+  },
+  {
+    label: "Indianapolis, IN",
+    value: "Indianapolis, IN",
+  },
+  {
+    label: "Denver, CO",
+    value: "Denver, CO",
+  },
+  {
+    label: "Washington, D.C.",
+    value: "Washington, D.C.",
+  },
+  {
+    label: "Boston, MA",
+    value: "Boston, MA",
+  },
+  {
+    label: "Nashville, TN",
+    value: "Nashville, TN",
+  },
 ];
 
 /*
@@ -52,12 +152,9 @@ const QuizScreen = () => {
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [locationInput, setLocationInput] = useState("N/A");
   const [locationEntered, setLocationEntered] = useState(false);
+  const [showDropDown, setShowDropDown] = useState(false);
 
   // Event handler for input change
-  const handleLocationInputChange = (text) => {
-    setLocationInput(text);
-  };
-
   const handleStartPress = () => {
     setQuizStarted(true);
   };
@@ -102,13 +199,18 @@ const QuizScreen = () => {
       return (
         <View style={styles.locationView}>
           <Text style={styles.locationQuestion}>
-            Enter your location for location based recommendations. Leave N/A otherwise:
+            Select a location for location based recommendations. Select N/A
+            otherwise:
           </Text>
-          <TextInput
-            style={styles.input}
-            placeholder="location"
+          <DropDown
+            label={"Location"}
+            mode={"outlined"}
+            visible={showDropDown}
+            showDropDown={() => setShowDropDown(true)}
+            onDismiss={() => setShowDropDown(false)}
             value={locationInput}
-            onChangeText={handleLocationInputChange}
+            setValue={setLocationInput}
+            list={cities}
           />
           <View style={styles.buttonOutline}>
             <Button
@@ -132,7 +234,11 @@ const QuizScreen = () => {
     }
   };
 
-  return <View style={styles.container}>{renderQuizContent()}</View>;
+  return (
+    <Provider>
+      <View style={styles.container}>{renderQuizContent()}</View>
+    </Provider>
+  );
 };
 
 const styles = StyleSheet.create({
