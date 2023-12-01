@@ -46,7 +46,7 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
         setShowSpinner(false);
       });
 
-    if (locationInput !== "") {
+    if (locationInput !== "N/A") {
       fetch(
         "https://5cfqsu7tzg.execute-api.us-west-2.amazonaws.com/default/EditInfo",
         {

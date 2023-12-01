@@ -11,6 +11,9 @@ jest.mock("../../contexts/UserContext", () => ({
 // Mock the react-native-paper components
 jest.mock("react-native-paper", () => ({
   Button: "Button",
+  TextInput: {
+    Icon: "TextInput.Icon",
+  },
   TextInput: "TextInput",
 }));
 

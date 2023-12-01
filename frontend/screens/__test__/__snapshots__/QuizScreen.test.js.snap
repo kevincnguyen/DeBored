@@ -1,18 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders StartQuiz component initially 1`] = `
-<View
-  style={
-    {
-      "alignItems": "center",
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-      "justifyContent": "center",
+<Provider>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "justifyContent": "center",
+      }
     }
-  }
->
-  <StartQuiz
-    handleStartPress={[Function]}
-  />
-</View>
+  >
+    <StartQuiz
+      handleStartPress={[Function]}
+    />
+  </View>
+</Provider>
 `;

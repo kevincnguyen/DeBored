@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TextInput, Text, Button } from "react-native";
+import { View, StyleSheet, Text, Button } from "react-native";
 import { Provider } from "react-native-paper";
 import DropDown from "react-native-paper-dropdown";
 

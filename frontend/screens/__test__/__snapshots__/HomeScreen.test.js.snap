@@ -159,7 +159,7 @@ exports[`renders HomeScreen component correctly 1`] = `
         }
       }
     >
-      Recommended by Friends
+      Connect with Friends
     </Text>
     <RCTScrollView
       horizontal={true}
@@ -296,7 +296,8 @@ exports[`renders HomeScreen component correctly 1`] = `
         }
       }
     >
-      Recent Popular Activities
+      Discover People in 
+      Seattle, WA
     </Text>
     <RCTScrollView
       horizontal={true}
