@@ -22,6 +22,9 @@ export const handler = async (event, context) => {
 		// Gets users who are not already friends with the current user
 		const possibleFriends = await client.db("Debored").collection('Users').find(
 			{ "_id": { "$nin": currentFriends}}).toArray()
+		if (!possibleFriends) {
+			throw new Error('No possible friends found')
+		}
 		return {
 			statusCode: 200,
 			body: JSON.stringify({message: 'Potential friends found!'})
