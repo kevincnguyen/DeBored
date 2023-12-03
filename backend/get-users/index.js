@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
@@ -7,13 +7,27 @@ export const handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
   try {
     console.log(`Received event: ${JSON.stringify(event)}`);
+    const { id } = JSON.parse(event.body);
     await client.connect();
+
+    // Finds the current user
+    const result = await client
+      .db("DeBored")
+      .collection("Users")
+      .findOne({ _id: new ObjectId(id) });
+
+    if (!result) {
+      throw new Error("Current user not found");
+    }
 
     // Gets all users besides the current user
     const allUsers = await client
       .db("DeBored")
       .collection("Users")
-      .find({}, { projection: { password: 0, friends: 0 } })
+      .find(
+        { _id: { $ne: new ObjectId(id) } },
+        { projection: { password: 0, friends: 0 } }
+      )
       .toArray();
 
     if (!allUsers) {
