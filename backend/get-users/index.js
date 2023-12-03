@@ -13,17 +13,14 @@ export const handler = async (event, context) => {
 		// Finds the current user
 		const result = await client.db("DeBored").collection('Users').findOne({ "_id": ObjectId(id) })
 		if (!result) {
-			throw new Error('User not found')
+			throw new Error('Current user not found')
 		}
 
-		// Gets current users friends
-		const currentFriends = result.friends
-
-		// Gets users who are not already friends with the current user
-		const possibleFriends = await client.db("Debored").collection('Users').find(
-			{ "_id": { "$nin": currentFriends}}).toArray()
-		if (!possibleFriends) {
-			throw new Error('No possible friends found')
+		// Gets all users besides the current user
+		const allUsers = await client.db("Debored").collection('Users').find(
+			{ "_id": { "$ne": ObjectId(id)}}).toArray()
+		if (!allUsers) {
+			throw new Error('No other users exist')
 		}
 		return {
 			statusCode: 200,
