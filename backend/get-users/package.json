@@ -1,0 +1,17 @@
+{
+  "name": "get-users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "tar -a -cf GetUsers.zip . && aws --profile debored s3 cp GetUsers.zip s3://debored-lambdas && aws --profile debored lambda update-function-code --function-name GetUsers --s3-bucket debored-lambdas --s3-key GetUsers.zip && rm GetUsers.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
