@@ -3,12 +3,16 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import ContactInfo from "./ContactInfo";
 
 import { useUser } from "../../contexts/UserContext";
+import { useImage } from "../../contexts/ImageContext";
 
 /*
  * A card displaying the profile picture, name, bio, and contact
  */
-const ProfileCard = ({ imageKey }) => {
+const ProfileCard = () => {
   const { user } = useUser();
+  const { imageKey } = useImage();
+
+  console.log(imageKey);
 
   return (
     <View style={styles.container}>

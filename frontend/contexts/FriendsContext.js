@@ -3,12 +3,12 @@ import React, { createContext, useContext, useState, useMemo } from "react";
 const FriendsContext = createContext();
 
 /*
- * Provider that manages the user state
+ * Provider that manages the friends state
  */
 export const FriendsProvider = ({ children }) => {
   const [friends, setFriends] = useState([]);
 
-  // Function that updates the user information
+  // Function that updates the friends information
   const updateFriends = (newFriends) => {
     setFriends(newFriends);
   };
@@ -29,7 +29,7 @@ export const FriendsProvider = ({ children }) => {
   );
 };
 
-// Hook to easily use the user context
+// Hook to easily use the friends context
 export const useFriends = () => {
   const context = useContext(FriendsContext);
 

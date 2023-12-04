@@ -7,7 +7,7 @@ import RecentActivities from "../components/Profile/RecentActivities";
 /*
  * The profile screen including profile information and a users recent DeBored activities.
  */
-const ProfileScreen = ({ imageKey }) => {
+const ProfileScreen = () => {
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = useCallback(() => {
@@ -24,7 +24,7 @@ const ProfileScreen = ({ imageKey }) => {
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
-      <ProfileCard imageKey={imageKey} />
+      <ProfileCard />
       <RecentActivities />
     </ScrollView>
   );

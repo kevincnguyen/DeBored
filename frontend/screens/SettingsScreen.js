@@ -15,6 +15,7 @@ import * as ImagePicker from "expo-image-picker";
 import * as FileSystem from "expo-file-system";
 
 import { useUser } from "../contexts/UserContext";
+import { useImage } from "../contexts/ImageContext";
 import DismissKeyboard from "../components/Utils/DismissKeyboard";
 
 /*
@@ -22,6 +23,7 @@ import DismissKeyboard from "../components/Utils/DismissKeyboard";
  */
 const SettingsScreen = ({ handleImageRender }) => {
   const { user, updateUser } = useUser();
+  const { updateImageKey } = useImage();
   const [loading, setLoading] = useState(false);
   const [image, setImage] = useState(null);
   const [name, setName] = useState(user.name);
@@ -41,7 +43,9 @@ const SettingsScreen = ({ handleImageRender }) => {
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
       aspect: [4, 3],
-      quality: 1,
+      quality: 0.7,
+      height: 800,
+      width: 800,
     });
     if (!result.canceled) {
       setImage(result.assets[0].uri);
@@ -129,7 +133,7 @@ const SettingsScreen = ({ handleImageRender }) => {
           facebook: facebook,
           phone: phone,
         });
-        handleImageRender();
+        updateImageKey();
         setImage(null);
         setLoading(false);
       })
