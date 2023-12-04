@@ -10,7 +10,7 @@ import {
 
 import UserModal from "./UserModal/UserModal";
 
-const UserTile = ({ user }) => {
+const UserTile = ({ otherUser }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
@@ -20,8 +20,8 @@ const UserTile = ({ user }) => {
   return (
     <View>
       <TouchableOpacity onPress={toggleModal} style={styles.container}>
-        <Image style={styles.image} src={user.profilePicURL} />
-        <Text style={styles.name}>{user.name}</Text>
+        <Image src={otherUser.profilePicURL} style={styles.image} />
+        <Text style={styles.name}>{otherUser.name}</Text>
       </TouchableOpacity>
 
       <Modal
@@ -29,9 +29,7 @@ const UserTile = ({ user }) => {
         visible={modalVisible}
         onRequestClose={toggleModal}
       >
-        <TouchableOpacity onPress={toggleModal}>
-          <UserModal profile={user} />
-        </TouchableOpacity>
+        <UserModal otherUser={otherUser} toggleModal={toggleModal} />
       </Modal>
     </View>
   );

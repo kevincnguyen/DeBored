@@ -12,14 +12,10 @@ const ProfileCard = ({ imageKey }) => {
 
   return (
     <View style={styles.container}>
-      <Image
-        key={imageKey}
-        source={{ uri: user.profilePicURL }}
-        style={styles.picture}
-      />
+      <Image key={imageKey} src={user.profilePicURL} style={styles.picture} />
       <Text style={styles.name}>{user.name}</Text>
       <Text style={styles.bio}>{user.bio}</Text>
-      <ContactInfo otherUser={otherUser} />
+      <ContactInfo />
     </View>
   );
 };

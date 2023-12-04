@@ -1,5 +1,14 @@
 import React, { useState, useCallback } from "react";
-import { RefreshControl, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  SafeAreaView,
+  RefreshControl,
+  StyleSheet,
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 import ProfileCard from "./ProfileCard";
 import RecentActivities from "./RecentActivities";
@@ -8,7 +17,7 @@ import RecentActivities from "./RecentActivities";
  * The profile screen modal for a user
  * including profile information and a users recent DeBored activities.
  */
-const UserModal = ({ profile }) => {
+const UserModal = ({ otherUser, toggleModal }) => {
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = useCallback(() => {
@@ -20,15 +29,30 @@ const UserModal = ({ profile }) => {
   }, []);
 
   return (
-    <ScrollView
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-      }
-    >
-      <ProfileCard profile={profile} />
-      <RecentActivities profile={profile} />
-    </ScrollView>
+    <SafeAreaView>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={toggleModal}>
+          <Ionicons name="chevron-back" size={24} color="black" />
+        </TouchableOpacity>
+      </View>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
+      >
+        <ProfileCard otherUser={otherUser} />
+        <RecentActivities otherUser={otherUser} />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  header: {
+    height: 45,
+    paddingLeft: 16,
+    justifyContent: "center",
+  },
+});
 
 export default UserModal;

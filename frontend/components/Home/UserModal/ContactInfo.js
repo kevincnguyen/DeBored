@@ -29,20 +29,20 @@ const iconMappings = {
 /**
  * A row of contact icons
  */
-const ContactInfo = ({ profile }) => {
+const ContactInfo = ({ otherUser }) => {
   const handlePress = (icon) => {
     if (icon === "call") {
       Alert.alert(
         "Contact Options",
-        `How would you like to contact ${profile.name}?`,
+        `How would you like to contact ${otherUser.name}?`,
         [
           {
             text: "Call",
-            onPress: () => Linking.openURL(`tel:${profile.phone}`),
+            onPress: () => Linking.openURL(`tel:${otherUser.phone}`),
           },
           {
             text: "Text",
-            onPress: () => Linking.openURL(`sms:${profile.phone}`),
+            onPress: () => Linking.openURL(`sms:${otherUser.phone}`),
           },
           {
             text: "Cancel",
@@ -51,18 +51,18 @@ const ContactInfo = ({ profile }) => {
         ]
       );
     } else if (icon === "logo-instagram") {
-      Linking.openURL(`https://www.instagram.com/${profile.instagram}/`);
+      Linking.openURL(`https://www.instagram.com/${otherUser.instagram}/`);
     } else if (icon === "logo-twitter") {
-      Linking.openURL(`https://www.twitter.com/${profile.twitter}/`);
+      Linking.openURL(`https://www.twitter.com/${otherUser.twitter}/`);
     } else if (icon === "logo-facebook") {
-      Linking.openURL(`${profile.facebook}/`);
+      Linking.openURL(`${otherUser.facebook}/`);
     } else if (icon === "mail") {
-      Linking.openURL(`mailto: ${profile.email}`);
+      Linking.openURL(`mailto: ${otherUser.email}`);
     }
   };
 
   const displayIcons = icons
-    .filter((icon) => profile[iconMappings[icon]] !== "")
+    .filter((icon) => otherUser[iconMappings[icon]] !== "")
     .map((icon) => (
       <TouchableOpacity key={icon} onPress={() => handlePress(icon)}>
         <Ionicons style={styles.icon} name={icon} size={23} color="black" />

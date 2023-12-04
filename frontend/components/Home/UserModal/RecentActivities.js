@@ -5,8 +5,8 @@ import Activity from "../../Profile/Activity";
 /*
  * A list of recent activities displayed on a user profile.
  */
-const RecentActivities = ({ profile }) => {
-  const displayActivities = profile.recentActivities
+const RecentActivities = ({ otherUser }) => {
+  const displayActivities = otherUser.recentActivities
     .reverse()
     .map((activity, index) => (
       <Activity key={`${activity}-${index}`} activity={activity} />
