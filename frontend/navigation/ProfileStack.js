@@ -26,7 +26,6 @@ const ProfileStack = () => {
         name="Main"
         options={{
           headerTitle: "",
-          // TODO: Render settings button if logged in user is the same as profile
           headerRight: () => <SettingsButton />,
           headerShadowVisible: false,
           cardStyle: {

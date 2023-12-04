@@ -7,8 +7,6 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import { useUser } from "../../contexts/UserContext";
-
 /**
  * The name of all icons in Ionicons
  */
@@ -31,22 +29,20 @@ const iconMappings = {
 /**
  * A row of contact icons
  */
-const ContactInfo = () => {
-  const { user } = useUser();
-
+const ContactInfo = ({ profile }) => {
   const handlePress = (icon) => {
     if (icon === "call") {
       Alert.alert(
         "Contact Options",
-        `How would you like to contact ${user.name}?`,
+        `How would you like to contact ${profile.name}?`,
         [
           {
             text: "Call",
-            onPress: () => Linking.openURL(`tel:${user.phone}`),
+            onPress: () => Linking.openURL(`tel:${profile.phone}`),
           },
           {
             text: "Text",
-            onPress: () => Linking.openURL(`sms:${user.phone}`),
+            onPress: () => Linking.openURL(`sms:${profile.phone}`),
           },
           {
             text: "Cancel",
@@ -55,18 +51,18 @@ const ContactInfo = () => {
         ]
       );
     } else if (icon === "logo-instagram") {
-      Linking.openURL(`https://www.instagram.com/${user.instagram}/`);
+      Linking.openURL(`https://www.instagram.com/${profile.instagram}/`);
     } else if (icon === "logo-twitter") {
-      Linking.openURL(`https://www.twitter.com/${user.twitter}/`);
+      Linking.openURL(`https://www.twitter.com/${profile.twitter}/`);
     } else if (icon === "logo-facebook") {
-      Linking.openURL(`${user.facebook}/`);
+      Linking.openURL(`${profile.facebook}/`);
     } else if (icon === "mail") {
-      Linking.openURL(`mailto: ${user.email}`);
+      Linking.openURL(`mailto: ${profile.email}`);
     }
   };
 
   const displayIcons = icons
-    .filter((icon) => user[iconMappings[icon]] !== "")
+    .filter((icon) => profile[iconMappings[icon]] !== "")
     .map((icon) => (
       <TouchableOpacity key={icon} onPress={() => handlePress(icon)}>
         <Ionicons style={styles.icon} name={icon} size={23} color="black" />

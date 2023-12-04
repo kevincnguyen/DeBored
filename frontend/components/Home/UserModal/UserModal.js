@@ -1,13 +1,14 @@
 import React, { useState, useCallback } from "react";
 import { RefreshControl, ScrollView } from "react-native";
 
-import ProfileCard from "../components/Profile/ProfileCard";
-import RecentActivities from "../components/Profile/RecentActivities";
+import ProfileCard from "./ProfileCard";
+import RecentActivities from "./RecentActivities";
 
 /*
- * The profile screen including profile information and a users recent DeBored activities.
+ * The profile screen modal for a user
+ * including profile information and a users recent DeBored activities.
  */
-const ProfileScreen = ({ imageKey }) => {
+const UserModal = ({ profile }) => {
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = useCallback(() => {
@@ -24,10 +25,10 @@ const ProfileScreen = ({ imageKey }) => {
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }
     >
-      <ProfileCard imageKey={imageKey} />
-      <RecentActivities />
+      <ProfileCard profile={profile} />
+      <RecentActivities profile={profile} />
     </ScrollView>
   );
 };
 
-export default ProfileScreen;
+export default UserModal;

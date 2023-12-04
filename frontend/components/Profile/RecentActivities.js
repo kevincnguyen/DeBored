@@ -6,7 +6,7 @@ import { useUser } from "../../contexts/UserContext";
 /*
  * A list of recent activities displayed on a user profile.
  */
-const RecentActivity = () => {
+const RecentActivities = () => {
   const { user } = useUser();
 
   const displayActivities = user.recentActivities
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RecentActivity;
+export default RecentActivities;

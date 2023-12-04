@@ -1,25 +1,20 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 
 import ContactInfo from "./ContactInfo";
-
-import { useUser } from "../../contexts/UserContext";
+import { useUser } from "../../../contexts/UserContext";
 
 /*
  * A card displaying the profile picture, name, bio, and contact
  */
-const ProfileCard = ({ imageKey }) => {
-  const { user } = useUser();
+const ProfileCard = ({ profile }) => {
+  const { user } = useUser(); // TODO: Use to determine friend status
 
   return (
     <View style={styles.container}>
-      <Image
-        key={imageKey}
-        source={{ uri: user.profilePicURL }}
-        style={styles.picture}
-      />
-      <Text style={styles.name}>{user.name}</Text>
-      <Text style={styles.bio}>{user.bio}</Text>
-      <ContactInfo otherUser={otherUser} />
+      <Image source={{ uri: profile.profilePicURL }} style={styles.picture} />
+      <Text style={styles.name}>{profile.name}</Text>
+      <Text style={styles.bio}>{profile.bio}</Text>
+      <ContactInfo profile={profile} />
     </View>
   );
 };
