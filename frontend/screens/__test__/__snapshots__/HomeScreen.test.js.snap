@@ -30,119 +30,19 @@ exports[`renders HomeScreen component correctly 1`] = `
       style={
         {
           "flexDirection": "row",
-          "marginTop": 30,
+          "height": 110,
+          "marginTop": 20,
           "paddingHorizontal": 10,
         }
       }
     >
       <View>
-        <View
+        <ActivityIndicator
+          color="#0000FF"
+          size="small"
           style={
             {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
               "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
             }
           }
         />
@@ -167,119 +67,19 @@ exports[`renders HomeScreen component correctly 1`] = `
       style={
         {
           "flexDirection": "row",
-          "marginTop": 30,
+          "height": 110,
+          "marginTop": 20,
           "paddingHorizontal": 10,
         }
       }
     >
       <View>
-        <View
+        <ActivityIndicator
+          color="#0000FF"
+          size="small"
           style={
             {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
               "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
             }
           }
         />
@@ -305,119 +105,19 @@ exports[`renders HomeScreen component correctly 1`] = `
       style={
         {
           "flexDirection": "row",
-          "marginTop": 30,
+          "height": 110,
+          "marginTop": 20,
           "paddingHorizontal": 10,
         }
       }
     >
       <View>
-        <View
+        <ActivityIndicator
+          color="#0000ff"
+          size="small"
           style={
             {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
               "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
-            }
-          }
-        />
-        <View
-          style={
-            {
-              "backgroundColor": "grey",
-              "borderRadius": 40,
-              "height": 80,
-              "marginLeft": 10,
-              "width": 80,
             }
           }
         />
