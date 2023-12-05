@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     marginVertical: 40,
     width: 250,
     textAlign: "justify",
-    height: 100,
+    height: 200,
   },
   header: {
     fontSize: 25,
