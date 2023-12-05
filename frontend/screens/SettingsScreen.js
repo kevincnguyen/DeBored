@@ -43,7 +43,7 @@ const SettingsScreen = ({ handleImageRender }) => {
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
       aspect: [4, 3],
-      quality: 0.7,
+      quality: 0.6,
       height: 800,
       width: 800,
     });

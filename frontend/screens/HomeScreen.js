@@ -119,9 +119,18 @@ const HomeScreen = () => {
             style={styles.loading}
           />
         ) : (
-          allUsers.filter(otherUser => !friends.some(friend => friend.friend._id === otherUser._id)).map((otherUser, index) => (
-            <UserTile key={index} otherUser={otherUser} />
-          ))
+          allUsers
+            .filter(
+              (otherUser) =>
+                !friends.some(
+                  (friend) =>
+                    friend.friend._id === otherUser._id &&
+                    friend.status === "ACCEPTED"
+                )
+            )
+            .map((otherUser, index) => (
+              <UserTile key={index} otherUser={otherUser} />
+            ))
         )}
       </ScrollView>
       <Text style={styles.secondHeader}>Connect with Friends</Text>
