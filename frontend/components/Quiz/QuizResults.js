@@ -45,6 +45,37 @@ const QuizResults = ({ chosenAnswers, locationInput, handleResetPress }) => {
         setActivities(["Encountered an error in fetching activities"]);
         setShowSpinner(false);
       });
+
+    if (locationInput !== "N/A") {
+      fetch(
+        "https://5cfqsu7tzg.execute-api.us-west-2.amazonaws.com/default/EditInfo",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            id: user._id,
+            location: locationInput,
+          }),
+        }
+      )
+        .then((response) => {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            console.log(user);
+            throw new Error("Invalid profile update");
+          }
+        })
+        .then((response) => {
+          console.log(`response: ${JSON.stringify(response)}`);
+          updateUser({
+            ...user,
+            location: locationInput,
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
   }, [chosenAnswers]);
 
   const handleRegenerate = () => {

@@ -38,6 +38,7 @@ export const handler = async (event, context) => {
       twitter: "",
       facebook: "",
       phone: "",
+      location: "",
       friends: [],
       recentActivities: [],
     };

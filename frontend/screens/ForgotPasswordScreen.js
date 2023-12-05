@@ -10,7 +10,7 @@ const ForgotPassordScreen = () => {
   const handleSendEmail = () => {
     console.log("Sending password reset email");
     Keyboard.dismiss();
-    // TODO: create reset password route
+    // TODO: Create reset password route
   };
 
   return (

@@ -12,7 +12,7 @@ exports[`renders ProfileScreen component correctly 1`] = `
   <RCTRefreshControl />
   <View>
     <ProfileCard />
-    <RecentActivity />
+    <RecentActivities />
   </View>
 </RCTScrollView>
 `;
