@@ -7,6 +7,8 @@ import StartQuiz from "../components/Quiz/StartQuiz";
 import QuizQuestion from "../components/Quiz/QuizQuestion";
 import QuizResults from "../components/Quiz/QuizResults";
 
+import { useUser } from "../contexts/UserContext";
+
 // List of quiz questions
 const quizQuestions = [
   {
@@ -147,6 +149,7 @@ const cities = [
  * The DeBored quiz screen that helps users find new activities.
  */
 const QuizScreen = () => {
+  const { user, updateUser } = useUser();
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
@@ -160,6 +163,8 @@ const QuizScreen = () => {
   };
 
   const processLocationInput = () => {
+    const newLocation = locationInput === "N/A" ? "Seattle, WA" : locationInput;
+    updateUser({ ...user, location: newLocation });
     setLocationEntered(true);
   };
 
